@@ -8,14 +8,26 @@ JavaScript is a lightweight, interpreted, multi-paradigm language, and features 
 - [Table of Contents](#table-of-contents)
 - [Getting Started | Hello World Program](#getting-started--hello-world-program)
   - [What happens if we print the console object to the console?](#what-happens-if-we-print-the-console-object-to-the-console)
-- [JavaScript Typing](#javascript-typing)
+- [JavaScript Best Practices](#javascript-best-practices)
+  - [JavaScript Typing](#javascript-typing)
+  - [Naming Variables](#naming-variables)
+  - [Naming Classes](#naming-classes)
+  - [Other Naming Rules](#other-naming-rules)
 - [Objects](#objects)
 - [Arrays](#arrays)
 - [Classes](#classes)
-- [JavaScript Best Practices](#javascript-best-practices)
-  - [Naming Conventions](#naming-conventions)
-- [Other Notes](#other-notes)
-  - [ES6](#es6)
+  - [Class Definition](#class-definition)
+  - [Class Expression](#class-expression)
+  - [Using a Constructor](#using-a-constructor)
+  - [Writing out a Car Class](#writing-out-a-car-class)
+  - [Extending Classes / Inheritance](#extending-classes--inheritance)
+- [Before ES6](#before-es6)
+  - [Classes](#classes-1)
+  - [Inheritance with Classes](#inheritance-with-classes)
+- [History | FAQ](#history--faq)
+  - [Are Java and JavaScript Related?](#are-java-and-javascript-related)
+  - [What is EcmaScript](#what-is-ecmascript)
+  - [Why is ES6 so special?](#why-is-es6-so-special)
 - [Vocabulary](#vocabulary)
 - [Code Along](#code-along)
 
@@ -69,7 +81,9 @@ Hopefully this gives some insight to how JavaScript works, we can see that there
 - Boiler plate Code
   - A block of code that is required for the compiler to understand how to read the code. JavaScript does not have boiler plate code
 
-# JavaScript Typing
+# JavaScript Best Practices
+
+## JavaScript Typing
 
 In coding languages we use primitive types which are immutable; meaning they are not able to be changed, and objects which are not considered primitive.
 
@@ -86,6 +100,70 @@ const e = false // other Boolean value
 const f = null // Null
 const g = undefined // Undefined
 ```
+
+## Naming Variables
+
+In JavaScript we use `Camel Casing` for most variable naming:
+
+1. No spaces
+2. The first word is lowercase and each word following that begins with an uppercase letter
+
+```JavaScript
+const fullName = "Jane Doe";
+const age = 31;
+const isTrue = true;
+const generatePassword = function(){...};
+const anotherFunction = () => {...};
+function oneMoreFunction(){...};
+```
+
+## Naming Classes
+
+Other than camel casing we use `Pascal Casing` specifically for classes:
+
+1. No spaces
+2. Every word in the variable name starts with a capital letter
+
+```JavaScript
+class Car {...}
+class AnotherClass {...}
+class OneMoreClass {...}
+class LongerClassName {...}
+```
+
+## Other Naming Rules
+
+Here are some general rules to follow when creating variable names in JavaScript. We dont have to follow these rules, but each language has its own set of agreed upon standards to make it easier for JavaScript developers to understand eachothers code.
+
+1. Keep names short
+2. Write descriptive names
+3. When initialzing functions its good practice to write a special kind of comment that describes the function. Below are two examples.
+
+this special comment is helpful because it allows developers to read at a glace what a function is for, and if it has any parameters, what they represent.
+
+```JavaScript
+/**
+ * Prints the string "Hello World" to the console
+ */
+function helloWorld() {
+  console.log("Hello World");
+}
+```
+
+```JavaScript
+/**
+ * @Property {Function} helloUser Prints a welcome string
+ * @Param {string} name Your name
+ * @returns {void}
+ */
+function helloUser(name) {
+  console.log("my name is " + name);
+}
+```
+
+When we describe a function with this special comment we can hover over the function and get a code snippet like the image below:
+![image](img/functionDescription.png)
+allows us to at a glance understand what a function is for, this comes in very handy with more complex functions, or when learning to use a new framework
 
 # Objects
 
@@ -155,7 +233,70 @@ console.log(a[a.length - 1]) // Returns "Hello" => last item in the array
 
 # Classes
 
-Classes are ways that we can create items and give those items data, and methods to perform some action. In this example we create the definiation for a basic Car, when creating classes we use Pascal casing, all words capitalized.
+Classes are our blueprint for creating objects.
+
+## Class Definition
+
+Common / Classic way of Defining a Class
+
+```JavaScript
+class ExampleClass {}
+```
+
+## Class Expression
+
+Another way that we can define a Class
+
+```JavaScript
+// unnamed
+const UnnamedSquare = class {};
+console.log(UnnamedSquare.name); // Returns UnnamedSquare
+
+// named
+const Square = class NamedSquare {};
+console.log(Square.name); // Returns NamedSquare
+```
+
+## Using a Constructor
+
+Defining the class is only the eqivilent of getting out blank blueprint paper, but how do we begin to write out and define the objects our class will create? One thing we can use to define the values we expect upon creation of our objects (what parts are needed when we create each object) to do this we use a constructor
+
+```JavaScript
+class ExampleClass {
+  constructor(name, age){ // Constructors dont always have to have any parameters
+    this.name = name;
+    this.age = age;
+  }
+}
+```
+
+In this example we:
+
+1. Define our class
+2. write out our constructor `constructor(){}`
+3. place two parameters in our constructor `constructor(name, age){}`
+4. then we use the `this` keyword to create a variable local to the class scope `this.name` = to the argument passed in by the user `name`
+
+An example of us using this and creating and instance(object) based on this blueprint(class) would be like below:
+
+```JavaScript
+class ExampleClass {
+  constructor(name, age){ // Constructors dont always have to have any parameters
+    this.name = name;
+    this.age = age;
+  }
+}
+
+const test = new ExampleClass("John", 34);
+
+// Now just like an object we can print variables from our instance using the . operator
+console.log(test.name) // Prints "John"
+console.log(test.age) // Prints 34
+```
+
+## Writing out a Car Class
+
+our car will take in 3 arguments, `color`, `make`, and `model`. Then we will have a method that prints those values out to the console.
 
 ```JavaScript
 class Car {
@@ -169,37 +310,139 @@ class Car {
   }
 }
 
-const a = new Car("Black", "Honda", "Civic");
-a.carInfo();
+const myCar = new Car("Black", "Honda", "Civic");
+myCar.carInfo();
 ```
 
-# JavaScript Best Practices
+Take a second to read over the code and understand how it works, in the next sub section we will extend this class and discuss the `super` method
 
-## Naming Conventions
+## Extending Classes / Inheritance
 
-In JavaScript we use `Camel Casing` for most variable naming, here are a couple of examples:
+Building off of our previous Car class we will now create a `Mechanic` class that inherits all the values from the `Car` class. We want to do this to allow our mechanic to see what cars are in the shop, and by splitting up our code into two classes like this, we use cleaner coding practices.
 
 ```JavaScript
-const fullName = "Jane Doe"
-const generatePassword = function(){...}
+// Car class
+class Car {
+  constructor(color, make, model) {
+    this.color = color;
+    this.make = make;
+    this.model = model;
+  }
+  carInfo() {
+    console.log(this.color + " " + this.make + " " + this.model);
+  }
+}
+
+// Mechanic class that extends from the Car class
+class Mechanic extends Car {
+  // The extend keyword allows Mechanic to inherit the functions from Car
+  constructor(color, make, model, firstName, lastName, rank, cars) {
+    super(color, make, model); // super allows us to inherit vairalbes from the Car class
+    this.color = color;
+    this.make = make;
+    this.model = model;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.rank = rank;
+    this.cars = cars;
+  }
+  addCar(car) {
+    this.cars.push(car);
+  }
+
+  listCars() {
+    return this.cars;
+  }
+
+  whoAmI() {
+    return `${this.firstName} ${this.lastName}, I am a ${this.rank}, these are my cars ${this.cars}`;
+  }
+}
+
+// Creating two cars
+const myCar = new Car("Black", "Honda", "Civic");
+const newCar = new Car("Yellow", "Honda", "Pilot");
+
+// Creating a mechanic object
+const john = new Mechanic( // Creates an object from the Mechanic class
+  "Black",
+  "Honda",
+  "Civic",
+  "John",
+  "Doe",
+  "Senior Mechanic",
+  [myCar]
+);
+
+// Calling the Car object
+myCar.carInfo(); // using the carInfo method from a Car object
+
+// Calling the Mechanic object
+john.addCar(newCar, new Car("Green", "Honda", "Civic"));
+john.addCar(new Car("Green", "Honda", "Civic"));
+console.log(john.listCars());
+console.log(john.whoAmI());
 ```
 
-Camel Casing refers to having the first word be lowercase and everything after it capitalized `fullName` is an example of naming a string varialbe and `generatePassword` is an example of naming a function
+# Before ES6
 
-Naming classes is one of the only times that we use a different casing, `Pascal Casing` where every word should be capitalized.
+## Classes
 
 ```JavaScript
-class Car {...}
-Car.someMethod()
+function Square(length) {
+  this.length = length;
+}
 
-class LongerClassName{...}
+Square.prototype.getArea() {
+  return this.length * this.length
+}
+
+var shape = new Square(12);
+console.log(shape.getArea()); // Returns 144
 ```
 
-Classes are how we create Objects and use OOP to create blocks of data to represent something, in this example we created a Car object, and we could attach methods and data to it.
+## Inheritance with Classes
 
-# Other Notes
+```JavaScript
+function Shape() {
+  // this.length = length;
+  // this.width = width;
+}
 
-## ES6
+Shape.prototype.getAreaSquare = function () {
+  return this.length * this.length;
+};
+
+Shape.prototype.getAreaRectangle = function () {
+  return this.length * this.width;
+};
+
+function Rectangle(length, width) {
+  this.length = length;
+  this.width = width;
+}
+
+function Square(length) {
+  this.length = length;
+}
+
+Object.setPrototypeOf(Rectangle.prototype, Shape.prototype);
+Object.setPrototypeOf(Square.prototype, Shape.prototype);
+
+const rec = new Rectangle(6, 12);
+const sqr = new Square(12);
+
+console.log(rec.getAreaRectangle(6, 12));
+console.log(sqr.getAreaSquare(12));
+```
+
+# History | FAQ
+
+## Are Java and JavaScript Related?
+
+## What is EcmaScript
+
+## Why is ES6 so special?
 
 # Vocabulary
 
