@@ -1,5 +1,7 @@
 # History | FAQ
 
+- [History](#)
+
 ## Are Java and JavaScript Related?
 
 ## What is EcmaScript

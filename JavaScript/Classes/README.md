@@ -1,5 +1,12 @@
 # Classes
 
+- [Classes](#classes)
+  - [Class Definition](#class-definition)
+  - [Class Expression](#class-expression)
+  - [Using a Constructor](#using-a-constructor)
+  - [Writing out a Car Class](#writing-out-a-car-class)
+  - [Extending Classes / Inheritance](#extending-classes--inheritance)
+
 Classes are our blueprint for creating objects.
 
 ## Class Definition

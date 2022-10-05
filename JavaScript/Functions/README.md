@@ -1,5 +1,17 @@
 # Functions. What are they?
 
+- [Functions. What are they?](#functions-what-are-they)
+  - [Declaring a Function](#declaring-a-function)
+  - [The Classic Hoisted Function](#the-classic-hoisted-function)
+  - [The Classic Non-Hoisted Function](#the-classic-non-hoisted-function)
+  - [The Arrow Function](#the-arrow-function)
+  - [Invoking a Function](#invoking-a-function)
+  - [Invoking Classic Hoisted Function](#invoking-classic-hoisted-function)
+  - [Invoking Classic Non-Hoisted Function](#invoking-classic-non-hoisted-function)
+  - [Invoking Arrow Function](#invoking-arrow-function)
+  - [Declaring and Invoking An Anonymous Function](#declaring-and-invoking-an-anonymous-function)
+  - [Using Arguments and Parameters](#using-arguments-and-parameters)
+
 Simply put a function in programming is like a container full of instructions. We can reuse this container and not have to worry about writing the instructions again and again. Since they are already in our function.
 
 ## Declaring a Function

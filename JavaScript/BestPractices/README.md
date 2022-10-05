@@ -1,5 +1,11 @@
 # JavaScript Best Practices
 
+- [JavaScript Best Practices](#javascript-best-practices)
+  - [JavaScript Typing](#javascript-typing)
+  - [Naming Variables](#naming-variables)
+  - [Naming Classes](#naming-classes)
+  - [Other Naming Rules](#other-naming-rules)
+
 ## JavaScript Typing
 
 In coding languages we use primitive types which are immutable; meaning they are not able to be changed, and objects which are not considered primitive.

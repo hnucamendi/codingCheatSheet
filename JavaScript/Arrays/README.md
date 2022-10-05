@@ -1,5 +1,7 @@
 # Arrays
 
+- [Arrays](#arrays)
+
 ```JavaScript
 const a = [] // Empty array
 ```

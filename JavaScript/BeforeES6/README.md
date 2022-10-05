@@ -1,5 +1,12 @@
 # Before ES6
 
+- [Before ES6](#before-es6)
+  - [Initializing Variables](#initializing-variables)
+  - [The Var Keyword and Scope](#the-var-keyword-and-scope)
+  - [Equality Operators](#equality-operators)
+  - [Classes](#classes)
+  - [Inheritance with Classes](#inheritance-with-classes)
+
 JavaScript has two major versions of the language; before EcmaScript6(ES6) and after ES6. Before ES6 a lot of the language was rushed and some features were not fully thought out or implemented to solve short-term problems, not long-term problems. Everything in this section will be covering parts of JavaScript that came before the release of ES6.
 
 ## Initializing Variables

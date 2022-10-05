@@ -1,5 +1,15 @@
 # Control Flow
 
+- [Control Flow](#control-flow)
+  - [Procedural Execution](#procedural-execution)
+  - [Conditional Execution](#conditional-execution)
+  - [Anatomy of a Conditional](#anatomy-of-a-conditional)
+  - [If-Else Block](#if-else-block)
+  - [the condensed if block](#the-condensed-if-block)
+  - [Switch Statement](#switch-statement)
+  - [Truthy Falsey](#truthy-falsey)
+  - [Short Circuiting](#short-circuiting)
+
 The order in which individual statements, instructions, or function calls are executed. When we define control flow in our code the Lexical Scope can change as the program executes.
 
 ## Procedural Execution
