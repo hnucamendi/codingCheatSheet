@@ -24,7 +24,7 @@ Returns:
 // You?
 ```
 
-![procedural execution](img/proceduralExec.gif)
+![procedural execution](../img/proceduralExec.gif)
 You can see that the code prints out the values in the order that they are listed from top to bottom. `Hello, World, How, Are, You?`. In the same example, I want to show what happens when we declare a function.
 
 ```JavaScript
@@ -38,7 +38,7 @@ printGreeting("Hello!")s
 console.log(john)
 ```
 
-![procedural execution with a function](img/proceduralExecFunc.gif)
+![procedural execution with a function](../img/proceduralExecFunc.gif)
 When we declare a function in the middle of our code, we `skip` the `function declaration` until we `call` or `invoke` the function. So this execution will actually
 
 1. Declare the function first(although not something that we can see in the GIF)
@@ -68,7 +68,7 @@ console.log("ok bye");
 
 ## Conditional Execution
 
-![conditional execution](img/conditionalExec.gif)
+![conditional execution](../img/conditionalExec.gif)
 When we use conditionals in our code we can alter the way our code executes drastically, the example here is small and simple but often we can use conditionals to run whole blocks of code that return something and exit the code, from within the condition.
 
 1. Start at the top and by default run code from top to bottom, so `Hello from the outside` will be printed

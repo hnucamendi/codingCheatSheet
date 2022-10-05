@@ -79,5 +79,5 @@ function helloUser(name) {
 ```
 
 When we describe a function with this special comment we can hover over the function and get a code snippet like the image below:
-![image](img/functionDescription.png)
+![image](../img/functionDescription.png)
 allows us to at a glance understand what a function is for, this comes in very handy with more complex functions, or when learning to use a new framework
