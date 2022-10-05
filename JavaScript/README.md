@@ -609,7 +609,28 @@ Here is a link with a table describing the precedence of each operator [MDN Web 
 
 ## Short Circuiting
 
-//TODO
+We have actially already explored the concept of short circuiting, we can think of it as something happening that makes an action
+jump out of its standard execution. Example:
+
+For the ||(OR) operator our variable `a` is short circuiting. Because the || operator expects one of the two values to be true in order to return that value. Once it checks the left, the program has no need to check the right, so it just stops and checks the value on the left
+
+```JavaScript
+const a = true || "Hello";
+const b = false || "Hello";
+
+console.log(a); // returns true
+console.log(b); // returns "Hello"
+```
+
+For the &&(AND) operator our variable `c` is short circuiting. Because the && operator expects both values to be true. Once it checks the left, it has no need to check the right, so it just stops and returns the value on the left.
+
+```JavaScript
+const c = false && "";
+const d = true && "Hello";
+
+console.log(c); // Returns false
+console.log(d); // Returns "Hello"
+```
 
 # Objects
 
