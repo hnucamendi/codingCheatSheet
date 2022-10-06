@@ -43,6 +43,7 @@ JavaScript is a lightweight, interpreted, multi-paradigm language, and features 
   - [Truthy Falsey](#truthy-falsey)
   - [Short Circuiting](#short-circuiting)
 - [Objects](#objects)
+  - [What can Objects hold?](#what-can-objects-hold)
 - [Arrays](#arrays)
 - [Classes](#classes)
   - [Class Definition](#class-definition)
@@ -634,40 +635,98 @@ console.log(d); // Returns "Hello"
 
 # Objects
 
-Objects can hold any type of data, primitive types, and other objects, as long as the data is wrapped in curly brackets and has a key attached to its value.
+Objects in JavaScript hold a collection of properties, we define our properties in objects in `key pair` values. The key being the identifier, and the value being the properties value. We can add primitive variables, functions, or other objects inside as valid properties. When we define a function inside of a method, we call that a Method, instead of a Function.
+
+There are two ways that we can instantiate an object
 
 ```JavaScript
-const a = {// Objects are wrapped in a block of curly brackets
-  item1: "Hello",
-  item2: 12,
-  item3: {
-    name: "Bob",
+const car = new Object() // using the 'new' keyword
+const car = {...} // using {} curly brackets
+```
+
+We can think of objects as a way to describe items, in a list of values, just like if we made a list of something. For example a car would have a color, make, model, and some other properties, we can define those using an object
+
+```JavaScript
+const car = {
+  color: "red",
+  make: "Honda",
+  model: "Civic",
+};
+```
+
+Once we define an object we can referance the items inside the object
+
+```JavaScript
+const car = {
+  color: "red",
+  make: "Honda",
+  model: "Civic",
+};
+
+console.log(car.color); // Returns "red"
+console.log(car["model"]); // Returns "Civic"
+```
+
+## What can Objects hold?
+
+Objects in JavaScript can hold all types of values, even another object. Below I made a car object with multiple methods, variable types, and objects. Take some time to read through it and understand what is going on, there is some syntax that has not been covered.
+
+```JavaScript
+const car = {
+  carName: "fast nd furious",
+  color: "red",
+  make: "Honda",
+  model: "Civic",
+  miles: 0,
+  distanceToWork: 0,
+  gasTank: 100,
+  musicInCar: ["Royalty free playlist"],
+  trashUnderSeats: {
+    leftSeat: ["gum", "stickers"],
+    rightSeat: ["winter glove", "cheese"],
   },
-}; // End of object
-```
-
-```JavaScript
-// Key: value
-const a = {
-  item1: "Hello"
-}
-```
-
-We can then get the value of an object using. and []
-
-```JavaScript
-const a = {// Objects are wrapped in a block of curly brackets
-  item1: "Hello",
-  item2: 12,
-  item3: {
-    name: "Bob",
+  addMusic: function (music) {
+    this.musicInCar.push(music);
   },
-}; // End of object
+  getMusic: function () {
+    return this.musicInCar;
+  },
+  setDistance: function (value) {
+    this.distanceToWork = value;
+  },
+  getDistance: function () {
+    return this.distanceToWork;
+  },
+  driveToWork: function () {
+    this.gasTank -= this.distanceToWork;
+    return `Drove ${this.distanceToWork} miles, and now ${this.carName} has ${
+      this.miles + this.distanceToWork
+    } miles`;
+  },
+  canIGetToWork: function () {
+    if (this.gasTank > this.distanceToWork) return "Yes, you can drive to work";
+    return "No, you cant drive to work";
+  },
+  getGasTank: function () {
+    return this.gasTank;
+  },
+};
 
-console.log(a.item3.name);
-console.log(a["item1"]);
-console.log(a.item2);
+console.log(car.getGasTank()); // Returns 100
+console.log(car.getDistance()); // Returns 0
+car.setDistance(12);
+console.log(car.getDistance()); // Returns 12
+console.log(car.driveToWork()); // Returns 'Drove 12 miles, and now fast nd furious has 12 miles'
+console.log(car.canIGetToWork()); // Returns 'Yes, you can drive to work'
+console.log(car.getMusic()); // Returns [ 'Royalty free playlist' ]
+car.addMusic("Birthday Song");
+console.log(car.getMusic()); // Returns [ 'Royalty free playlist', 'Birthday Song' ]
+console.log(car.color); // Returns 'red'
+console.log(car["model"]); // Returns 'Civic'
+console.log(car.getGasTank()); // Returns 88
 ```
+
+Quite an extensive example, hopefully you took some time to fully go over the code and understand it, a quick note on objects though. Imagine if anytime we wanted to make a new car we would have to write <b>EVERY</b> `method`, `variable`, `object`, `array`, and anything else that your car might have. It would be impossible to make enough cars for the whole world without making mistakes. That is why we have classes! Spoiler alert Classes are the blueprints to create objects, and there is a section that describes all about how classes work [Here](#classes).
 
 # Arrays
 
