@@ -380,7 +380,7 @@ const sayHello = (name) => 'Hello ' + name;
 
 # Control Flow
 
-The order in which individual statements, instructions, or function calls are executed. When we define control flow in our code the Lexical Scope can change as the program executes.
+The order in which individual statements, instructions, or function calls are executed. When we define control flow in our code the Lexical Scope can change as the program runs.
 
 ## Procedural Execution
 
@@ -617,10 +617,10 @@ Here is a link with a table describing the precedence of each operator [MDN Web 
 
 ## Short Circuiting
 
-We have actially already explored the concept of short circuiting, we can think of it as something happening that makes an action
+We have already explored the concept of short-circuiting, we can think of it as something happening that makes an action
 jump out of its standard execution. Example:
 
-For the ||(OR) operator our variable `a` is short circuiting. Because the || operator expects one of the two values to be true in order to return that value. Once it checks the left, the program has no need to check the right, so it just stops and checks the value on the left
+For the ||(OR) operator our variable `a` is short-circuiting. Because the || operator expects one of the two values to be true to return that value. Once it checks the left, the program has no need to check the right, so it just stops and checks the value on the left
 
 ```JavaScript
 const a = true || "Hello";
@@ -630,7 +630,7 @@ console.log(a); // returns true
 console.log(b); // returns "Hello"
 ```
 
-For the &&(AND) operator our variable `c` is short circuiting. Because the && operator expects both values to be true. Once it checks the left, it has no need to check the right, so it just stops and returns the value on the left.
+For the &&(AND) operator our variable `c` is short-circuiting. Because the && operator expects both values to be true. Once it checks the left, it has no need to check the right, so it just stops and returns the value on the left.
 
 ```JavaScript
 const c = false && "";
@@ -642,7 +642,7 @@ console.log(d); // Returns "Hello"
 
 # Objects
 
-Objects in JavaScript hold a collection of properties, we define our properties in objects in `key pair` values. The key being the identifier, and the value being the properties value. We can add primitive variables, functions, or other objects inside as valid properties. When we define a function inside of a method, we call that a Method, instead of a Function.
+Objects in JavaScript hold a collection of properties, we define our properties in objects in `key pair` values. The key is the identifier, and the value is the property value. We can add primitive variables, functions, or other objects as valid properties. When we define a function inside of a method, we call that a Method, instead of a Function.
 
 ## Defining an Object
 
@@ -698,7 +698,7 @@ console.log(car);
 // }
 ```
 
-We can think of objects as a way to describe items, in a list of values, just like if we made a list of something. For example a car would have a color, make, model, and some other properties, we can define those using an object
+We can think of objects as a way to describe items, in a list of values, just like if we made a list of something. For example, a car would have a color, make, model, and some other properties, we can define those using an object
 
 ```JavaScript
 const car = {
@@ -708,7 +708,7 @@ const car = {
 };
 ```
 
-Once we define an object we can referance the items inside the object
+Once we define an object we can reference the items inside the object
 
 ```JavaScript
 const car = {
@@ -723,7 +723,7 @@ console.log(car["model"]); // Returns "Civic"
 
 ## What can Objects hold?
 
-Objects in JavaScript can hold all types of values, even another object. Below I made a car object with multiple methods, variable types, and objects. Take some time to read through it and understand what is going on, there is some syntax that has not been covered.
+Objects in JavaScript can hold all types of values, even other objects. Below I made a car object with multiple methods, variable types, and objects. Take some time to read through it and understand what is going on, there is some syntax that has not been covered.
 
 ```JavaScript
 const car = {
@@ -759,7 +759,7 @@ const car = {
   },
   canIGetToWork: function () {
     if (this.gasTank > this.distanceToWork) return "Yes, you can drive to work";
-    return "No, you cant drive to work";
+    return "No, you can't drive to work";
   },
   getGasTank: function () {
     return this.gasTank;
@@ -780,11 +780,11 @@ console.log(car["model"]); // Returns 'Civic'
 console.log(car.getGasTank()); // Returns 88
 ```
 
-Quite an extensive example, hopefully you took some time to fully go over the code and understand it, a quick note on objects though. Imagine if anytime we wanted to make a new car we would have to write <b>EVERY</b> `method`, `variable`, `object`, `array`, and anything else that your car might have. It would be impossible to make enough cars for the whole world without making mistakes. That is why we have classes! Spoiler alert Classes are the blueprints to create objects, and there is a section that describes all about how classes work [Here](#classes).
+Quite an extensive example, hopefully, you took some time to fully go over the code and understand it, a quick note on objects though. Imagine if anytime we wanted to make a new car we would have to write <b>EVERY</b> `method`, `variable`, `object`, `array`, and anything else that your car might have. It would be impossible to make enough cars for the whole world without making mistakes. That is why we have classes! Spoiler alert Classes are the blueprints to create objects, and there is a section that describes all about how classes work [Here](#classes).
 
 # Arrays
 
-our last section on objects covered how we can make some item that can hold various properties organized by key pair values. And a perfect example of an object are Arrays. In fact Arrays are just an object that is pre defined for us to use in JavaScript, meaninng that arrays have methods
+our last section on objects covered how we can make some items that can hold various properties organized by key pair values. And a perfect example of an object is Arrays. Arrays are just an object that is pre-defined for us to use in JavaScript, meaning that arrays have methods
 
 ## Defining an Array
 
@@ -793,7 +793,7 @@ const a = [] // Empty array
 const b = new Array() // Empty Array using 'new' keyword
 ```
 
-Very similar to how we can initialize objects, part of the reason is because Arrays are objects! Similar to how we can add values to objects, when we use the `new` keyword, this is how we work with arrays:
+Very similar to how we can initialize objects, part of the reason is that Arrays are objects! Similar to how we can add values to objects, when we use the `new` keyword, this is how we work with arrays:
 
 ```JavaScript
 const names = new Array();
@@ -817,7 +817,7 @@ console.log(names);
 // ]
 ```
 
-We will talk about the `names[0]` syntax soon, but we are choosing the index in which to place our values into. we, can also create arrays with [] square brackets, here is the same array initialized that way:
+We will talk about the `names[0]` syntax soon, but we are choosing the index in which to place our values into. we can also create arrays with [] square brackets, here is the same array initialized that way:
 
 ```JavaScript
 const names = [
@@ -851,9 +851,9 @@ Here we have an array with the values:
 const arr = [24, 12, 10, 9, 15, -4]
 ```
 
-The index represents the location in the array where the values are. And we cant count each value starting from `1` but we start counting the index of values from `0`.
+The index represents the location in the array where the values are. And we can't count each value starting from `1` but we start counting the index of values from `0`.
 
-To get a value we must referance the location that value is in (The index of the value) so if we wanted to get the first value, we want to referance index 0.
+To get a value we must reference the location that value is in (The index of the value) so if we wanted to get the first value, we want to reference index 0.
 
 ```JavaScript
 console.log(arr[0]); // Prints 24
@@ -864,7 +864,7 @@ console.log(arr[4]); // Prints 15
 console.log(arr[5]); // Prints -4
 ```
 
-So if we use the index to referance the values in an array, there will always be 1 less numeric value than the length of the array. in our example `[24, 12, 10, 9, 15, -4]` our array has `6` values, so the max index is `5`. we can represent this in code like this:
+So if we use the index to reference the values in an array, there will always be 1 less numeric value than the length of the array. in our example `[24, 12, 10, 9, 15, -4]` our array has `6` values, so the max index is `5`. we can represent this in code like this:
 
 ```JavaScript
 arr.length // get the number of values in the array
@@ -877,7 +877,7 @@ console.log(arr[arr.length - 1]) // Prints -4
 
 Like in our example above, we used the `length` method to get the size of the array(number of values) there are many other methods that we can call on arrays to manipulate data in the array.
 
-We can always get the list of methods attatched to an array like so:
+We can always get the list of methods attached to an array like so:
 
 ```JavaScript
 console.log(Object.getOwnPropertyNames(Array));
@@ -922,7 +922,7 @@ console.log(Object.getOwnPropertyNames(Array));
 ];
 ```
 
-These methods are useful to because it allows us to write less code, and get a lot done. But since we are writing less code and using a predefine method, using too many methods creates a lot of abstraction. Sometimes this can be bad for beginner programmers. Abstraction is covered [here](#abstraction)
+These methods are useful because it allows us to write less code, and get a lot done. But since we are writing less code and using a predefined method, using too many methods creates a lot of abstraction. Sometimes this can be bad for beginner programmers. Abstraction is covered [here](#abstraction)
 
 # Classes
 
@@ -1079,7 +1079,7 @@ console.log(john.whoAmI());
 
 # Before ES6
 
-JavaScript has two major versions of the language; before EcmaScript6(ES6) and after ES6. Before ES6 a lot of the language was rushed and some features were not fully thought out or implemented to solve short-term problems, not long-term problems. Everything in this section will be covering parts of JavaScript that came before the release of ES6.
+JavaScript has two major versions of the language; before EcmaScript6(ES6) and after ES6. Before ES6 a lot of the language was rushed and some features were not fully thought out or implemented to solve short-term problems, not long-term problems. Everything in this section will cover parts of JavaScript that came before the release of ES6.
 
 ## Initializing Variables
 
