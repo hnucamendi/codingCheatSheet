@@ -22,6 +22,7 @@ JavaScript is a lightweight, interpreted, multi-paradigm language, and features 
   - [Naming Variables](#naming-variables)
   - [Naming Classes](#naming-classes)
   - [Other Naming Rules](#other-naming-rules)
+  - [Abstraction](#abstraction)
 - [Functions. What are they?](#functions-what-are-they)
   - [Declaring a Function](#declaring-a-function)
   - [The Classic Hoisted Function](#the-classic-hoisted-function)
@@ -43,8 +44,12 @@ JavaScript is a lightweight, interpreted, multi-paradigm language, and features 
   - [Truthy Falsey](#truthy-falsey)
   - [Short Circuiting](#short-circuiting)
 - [Objects](#objects)
+  - [Defining an Object](#defining-an-object)
   - [What can Objects hold?](#what-can-objects-hold)
 - [Arrays](#arrays)
+  - [Defining an Array](#defining-an-array)
+  - [Arrays and their Index](#arrays-and-their-index)
+  - [Array Methods](#array-methods)
 - [Classes](#classes)
   - [Class Definition](#class-definition)
   - [Class Expression](#class-expression)
@@ -197,6 +202,8 @@ function helloUser(name) {
 When we describe a function with this special comment we can hover over the function and get a code snippet like the image below:
 ![image](img/functionDescription.png)
 allows us to at a glance understand what a function is for, this comes in very handy with more complex functions, or when learning to use a new framework
+
+## Abstraction
 
 # Functions. What are they?
 
@@ -637,11 +644,58 @@ console.log(d); // Returns "Hello"
 
 Objects in JavaScript hold a collection of properties, we define our properties in objects in `key pair` values. The key being the identifier, and the value being the properties value. We can add primitive variables, functions, or other objects inside as valid properties. When we define a function inside of a method, we call that a Method, instead of a Function.
 
+## Defining an Object
+
 There are two ways that we can instantiate an object
 
 ```JavaScript
 const car = new Object() // using the 'new' keyword
 const car = {...} // using {} curly brackets
+```
+
+When using the `new` keyword we can still attach properties to the object like so:
+
+```JavaScript
+const car = new Object();
+car.carName = "fun car";
+// Anonymous function
+car.someMethod = function () {
+  return "Hello World";
+};
+// Named Function
+car.someOtherMethod = function someOtherMethod() {
+  return "Hello Earth";
+};
+
+console.log(car);
+// Prints the object below
+// {
+//   carName: 'fun car',
+//   someMethod: [Function (anonymous)],
+//   someOtherMethod: [Function: someOtherMethod]
+// }
+```
+
+We can define the same object by using {} curly brackets to initialize the object like so:
+
+```JavaScript
+const car = {
+  carName: "fun car",
+  someMethod: function () {
+    return "Hello World";
+  },
+  someOtherMethod: function () {
+    return "Hello Earth";
+  },
+};
+
+console.log(car);
+// Prints the object below
+// {
+//   carName: 'fun car',
+//   someMethod: [Function: someMethod],
+//   someOtherMethod: [Function: someOtherMethod]
+// }
 ```
 
 We can think of objects as a way to describe items, in a list of values, just like if we made a list of something. For example a car would have a color, make, model, and some other properties, we can define those using an object
@@ -730,32 +784,145 @@ Quite an extensive example, hopefully you took some time to fully go over the co
 
 # Arrays
 
+our last section on objects covered how we can make some item that can hold various properties organized by key pair values. And a perfect example of an object are Arrays. In fact Arrays are just an object that is pre defined for us to use in JavaScript, meaninng that arrays have methods
+
+## Defining an Array
+
 ```JavaScript
 const a = [] // Empty array
+const b = new Array() // Empty Array using 'new' keyword
 ```
 
-Arrays are not a special type, they are technically objects, so they have a lot of methods attached to them for us to use:
+Very similar to how we can initialize objects, part of the reason is because Arrays are objects! Similar to how we can add values to objects, when we use the `new` keyword, this is how we work with arrays:
 
 ```JavaScript
-a.push("Hello") // adds the string "Hello" to the end of the array
-a.unshift("World") // adds the string "World" to the end of the array
+const names = new Array();
 
-console.log(a) // Returns => ["World", "Hello"]
+names[0] = "Osiel";
+names[1] = function someMethod() {
+  return "Hello World";
+};
+names[2] = () => "Hello World";
+names[3] = true;
+names[4] = { valueInObject: "cool value" };
+
+console.log(names);
+// Prints the array below
+// [
+//   'Osiel',
+//   [Function: someMethod],
+//   [Function (anonymous)],
+//   true,
+//   { valueInObject: 'cool value' }
+// ]
 ```
 
-We can also use [] to get individual items in an array
+We will talk about the `names[0]` syntax soon, but we are choosing the index in which to place our values into. we, can also create arrays with [] square brackets, here is the same array initialized that way:
 
 ```JavaScript
-console.log(a[0]) // Returns "World"
-console.log([1]) // Returns "Hello"
+const names = [
+  "Osiel",
+  function someMethod() {
+    return "Hello World";
+  },
+  () => "Hello World",
+  true,
+  { valueInObject: "cool value" },
+];
+
+console.log(names);
+// Prints the array below
+// [
+//   'Osiel',
+//   [Function: someMethod],
+//   [Function (anonymous)],
+//   true,
+//   { valueInObject: 'cool value' }
+// ]
 ```
 
-This is because arrays start their count at 0, so the first item is at index 0 => a[0]
-So for an array of length 2, the last item is at index 1 => array_length - 1 = last index
+## Arrays and their Index
+
+<img src="img/ArrayImage.jpg" width="100%">
+
+Here we have an array with the values:
 
 ```JavaScript
-console.log(a[a.length - 1]) // Returns "Hello" => last item in the array
+const arr = [24, 12, 10, 9, 15, -4]
 ```
+
+The index represents the location in the array where the values are. And we cant count each value starting from `1` but we start counting the index of values from `0`.
+
+To get a value we must referance the location that value is in (The index of the value) so if we wanted to get the first value, we want to referance index 0.
+
+```JavaScript
+console.log(arr[0]); // Prints 24
+console.log(arr[1]); // Prints 12
+console.log(arr[2]); // Prints 10
+console.log(arr[3]); // Prints 9
+console.log(arr[4]); // Prints 15
+console.log(arr[5]); // Prints -4
+```
+
+So if we use the index to referance the values in an array, there will always be 1 less numeric value than the length of the array. in our example `[24, 12, 10, 9, 15, -4]` our array has `6` values, so the max index is `5`. we can represent this in code like this:
+
+```JavaScript
+arr.length // get the number of values in the array
+arr.length - 1 // to get the index value
+
+console.log(arr[arr.length - 1]) // Prints -4
+```
+
+## Array Methods
+
+Like in our example above, we used the `length` method to get the size of the array(number of values) there are many other methods that we can call on arrays to manipulate data in the array.
+
+We can always get the list of methods attatched to an array like so:
+
+```JavaScript
+console.log(Object.getOwnPropertyNames(Array));
+// Returns:
+[
+  "length",
+  "constructor",
+  "concat",
+  "copyWithin",
+  "fill",
+  "find",
+  "findIndex",
+  "lastIndexOf",
+  "pop",
+  "push",
+  "reverse",
+  "shift",
+  "unshift",
+  "slice",
+  "sort",
+  "splice",
+  "includes",
+  "indexOf",
+  "join",
+  "keys",
+  "entries",
+  "values",
+  "forEach",
+  "filter",
+  "flat",
+  "flatMap",
+  "map",
+  "every",
+  "some",
+  "reduce",
+  "reduceRight",
+  "toLocaleString",
+  "toString",
+  "at",
+  "findLast",
+  "findLastIndex",
+];
+```
+
+These methods are useful to because it allows us to write less code, and get a lot done. But since we are writing less code and using a predefine method, using too many methods creates a lot of abstraction. Sometimes this can be bad for beginner programmers. Abstraction is covered [here](#abstraction)
 
 # Classes
 
