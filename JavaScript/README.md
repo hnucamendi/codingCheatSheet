@@ -155,6 +155,65 @@ These are some tools that I would recommend installing
 
 # Running Programs
 
+There are two run-time environments in JavaScript, this is something covered in detail in the [Node](#node) section, but for now all that is really needed is to know that we can run our program:
+
+1. In our Web Browser (Google Chrome, Safari, Firefox, etc...)
+2. Or on our machines with Node
+
+## Running in the browser
+
+1. Ensure that you have an HTML page in the same directory where you are writing you JavaScript code. Below is the minimum code we need to get our `<script></script>` connected to our JavaScript code
+
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./codeAlong.js" defer></script> <!-- This is where we link the JS code -->
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+```
+
+2. Once we have this piece, we can write some JavaScript code, make sure the filename of the JavaScript file matches what you have in the `index.html` file. The block of code below will choose a random number on each run and print the numbers 0 up to the random number value. and print it to the console
+
+```JavaScript
+for (let i = 0; i < Math.random() * 1000; i++) {
+  console.log(i);
+}
+```
+
+3. Once we have our files setup you can use extensions like `live server` we install it from the `extensions` tab on the left hand tab.
+   ![Live Server](./img/install/mac/extensions/liveserver.png)
+4. Once we have this installed, when you go into your HTML file you will see a button on the bottom right of your VSCode window that says `Go Live`, you should click on this, and a new window in your default browser will open.
+5. Now in the Browser you can open the browsers console a couple of ways.
+   1. On a keyboard with all the F1-F12 keys press `F12` to open the console
+   2. On a keyboard without these keys, look for an `Fn` key, press `Fn` + `F12` In this case F12 might be a media key or something else
+   3. Right click anywhere in the browser window and click `inspect` then in the new window click on the tab labeled `console`
+      ![browser run example](./img/install/mac/extensions/browserRun.png)
+6. Now here in console we can right some code, but the code that we wrote in our JavaScript code, should already be showing up here, so as you write more code as long as you `console.log` it, it will show up here
+
+## Running in Node
+
+To do this, you must have Node installed [Install Node | Mac](#node--mac) [Install Node | Windows](#node--win)
+
+1. With Node running our program is much simpler, we dont need an html file for this, all we need is a JavaScript file with our code
+
+```JavaScript
+for (let i = 0; i < Math.random() * 1000; i++) {
+  console.log(i);
+}
+```
+
+2. Now open up a terminal window, you can do this in VScode by pressing `control` + `shift` + `\``
+3. make sure you are in the directory that holds your code
+4. run the command: `node {{name of JS file}}` In my case lets say the name of my file is `index.js` I would run `node index.js`. And this is it! as long as you have something being logged to the console with `console.log` you will see a result in the terminal window
+
+# Node
+
 ## Run-Time Environment(RTE)
 
 1. The Browser (Google Chrome, Firefox, Safari)
