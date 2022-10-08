@@ -85,23 +85,8 @@ JavaScript is a lightweight, interpreted, multi-paradigm language, and features 
 - [Vocabulary](#vocabulary)
 - [Code Along](#code-along)
 
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>LAST SECTION</strong></span>
-</div>
-
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>TOP</strong></span>
-</div>
+<a href="#">![Last Section](./img/oneArrow.png)</a> Scroll to Last Section
+<a href="#">![TOP](./img/twoArrow.png)</a> Scroll to Top
 
 # Installation and configuration
 
@@ -174,23 +159,8 @@ These are some tools that I would recommend installing
 1. [Iterm2](https://iterm2.com/) with [oh-my-zsh](https://ohmyz.sh/) and the [powerlevel10k theme](https://github.com/romkatv/powerlevel10k)
 2. [Fira Code](https://github.com/tonsky/FiraCode) with ligaments enabled this font is really nice
 
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>LAST SECTION</strong></span>
-</div>
-
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>TOP</strong></span>
-</div>
+<a href="#">![Last Section](./img/oneArrow.png)</a> Scroll to Last Section
+<a href="#">![TOP](./img/twoArrow.png)</a> Scroll to Top
 
 # Running Programs
 
@@ -253,23 +223,8 @@ for (let i = 0; i < Math.random() * 1000; i++) {
 4. run the command: `node {{name of JS file}}` In my case let's say the name of my file is `index.js` I would run `node index.js`. And this is it! as long as you have something being logged to the console with `console.log` you will see a result in the terminal window
    ![running in node](./img/install/mac/extensions/terminalLog.png)
 
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>LAST SECTION</strong></span>
-</div>
-
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>TOP</strong></span>
-</div>
+<a href="#">![Last Section](./img/oneArrow.png)</a> Scroll to Last Section
+<a href="#">![TOP](./img/twoArrow.png)</a> Scroll to Top
 
 # Hello World Program
 
@@ -400,23 +355,8 @@ allows us to at a glance understand what a function is for, this comes in very h
 
 Abstraction
 
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>LAST SECTION</strong></span>
-</div>
-
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>TOP</strong></span>
-</div>
+<a href="#">![Last Section](./img/oneArrow.png)</a> Scroll to Last Section
+<a href="#">![TOP](./img/twoArrow.png)</a> Scroll to Top
 
 # Node
 
@@ -474,23 +414,8 @@ Remember this is a closer look at the event loop from the last step.
 5. Operation Completed: Once an event is executed by the event loop, we can free up some space in our call stack(a list of events taking up threads) and return the event finished to the event emitter that started this sequence of events.
 6. Request going out: So following the task returning the request that was sent to be processed will now return an error if it errored, or return whatever value was expected when the process started
 
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>LAST SECTION</strong></span>
-</div>
-
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>TOP</strong></span>
-</div>
+<a href="#">![Last Section](./img/oneArrow.png)</a> Scroll to Last Section
+<a href="#">![TOP](./img/twoArrow.png)</a> Scroll to Top
 
 # Functions. What are they?
 
@@ -665,23 +590,8 @@ console.log(sayHello('Samny')); //Returns "Hello Samny"
 const sayHello = (name) => 'Hello ' + name;
 ```
 
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>LAST SECTION</strong></span>
-</div>
-
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>TOP</strong></span>
-</div>
+<a href="#">![Last Section](./img/oneArrow.png)</a> Scroll to Last Section
+<a href="#">![TOP](./img/twoArrow.png)</a> Scroll to Top
 
 # Control Flow
 
@@ -945,23 +855,8 @@ console.log(c); // Returns false
 console.log(d); // Returns "Hello"
 ```
 
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>LAST SECTION</strong></span>
-</div>
-
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>TOP</strong></span>
-</div>
+<a href="#">![Last Section](./img/oneArrow.png)</a> Scroll to Last Section
+<a href="#">![TOP](./img/twoArrow.png)</a> Scroll to Top
 
 # Objects
 
@@ -1105,23 +1000,8 @@ console.log(car.getGasTank()); // Returns 88
 
 Quite an extensive example, hopefully, you took some time to fully go over the code and understand it, a quick note on objects though. Imagine if anytime we wanted to make a new car we would have to write <b>EVERY</b> `method`, `variable`, `object`, `array`, and anything else that your car might have. It would be impossible to make enough cars for the whole world without making mistakes. That is why we have classes! Spoiler alert Classes are the blueprints to create objects, and there is a section that describes all about how classes work [Here](#classes).
 
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>LAST SECTION</strong></span>
-</div>
-
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>TOP</strong></span>
-</div>
+<a href="#">![Last Section](./img/oneArrow.png)</a> Scroll to Last Section
+<a href="#">![TOP](./img/twoArrow.png)</a> Scroll to Top
 
 # Arrays
 
@@ -1265,23 +1145,8 @@ console.log(Object.getOwnPropertyNames(Array));
 
 These methods are useful because it allows us to write less code, and get a lot done. But since we are writing less code and using a predefined method, using too many methods creates a lot of abstraction. Sometimes this can be bad for beginner programmers. Abstraction is covered [here](#abstraction)
 
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>LAST SECTION</strong></span>
-</div>
-
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>TOP</strong></span>
-</div>
+<a href="#">![Last Section](./img/oneArrow.png)</a> Scroll to Last Section
+<a href="#">![TOP](./img/twoArrow.png)</a> Scroll to Top
 
 # Classes
 
@@ -1436,23 +1301,8 @@ console.log(john.listCars());
 console.log(john.whoAmI());
 ```
 
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>LAST SECTION</strong></span>
-</div>
-
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>TOP</strong></span>
-</div>
+<a href="#">![Last Section](./img/oneArrow.png)</a> Scroll to Last Section
+<a href="#">![TOP](./img/twoArrow.png)</a> Scroll to Top
 
 # Before ES6
 
@@ -1599,23 +1449,8 @@ console.log(rec.getAreaRectangle(6, 12));
 console.log(sqr.getAreaSquare(12));
 ```
 
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>LAST SECTION</strong></span>
-</div>
-
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>TOP</strong></span>
-</div>
+<a href="#">![Last Section](./img/oneArrow.png)</a> Scroll to Last Section
+<a href="#">![TOP](./img/twoArrow.png)</a> Scroll to Top
 
 # History | FAQ
 
@@ -1625,23 +1460,8 @@ console.log(sqr.getAreaSquare(12));
 
 ## Why is ES6 so special?
 
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>LAST SECTION</strong></span>
-</div>
-
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>TOP</strong></span>
-</div>
+<a href="#">![Last Section](./img/oneArrow.png)</a> Scroll to Last Section
+<a href="#">![TOP](./img/twoArrow.png)</a> Scroll to Top
 
 # Vocabulary
 
@@ -1672,23 +1492,8 @@ console.log(sqr.getAreaSquare(12));
 | Arguments                    | Arguments are passed in a function call (when invoking a function) to be used in the code the function executes. These variables are local to the specific function                                                                                                                                                                                                                                                                                                                                                                                               |
 | Parameters                   | Parameters are used in a function definition to initialize local variables that are expected to be passed in later when calling(invoking) the function                                                                                                                                                                                                                                                                                                                                                                                                            |
 
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>LAST SECTION</strong></span>
-</div>
-
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>TOP</strong></span>
-</div>
+<a href="#">![Last Section](./img/oneArrow.png)</a> Scroll to Last Section
+<a href="#">![TOP](./img/twoArrow.png)</a> Scroll to Top
 
 # Code Along
 
@@ -1697,20 +1502,5 @@ Once you have finished reading the documentation, or if you would like to practi
 1. Highlight the code you wish to comment on or uncomment
 2. press `cmd + /` on mac or `ctrl + /` on windows
 
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>LAST SECTION</strong></span>
-</div>
-
-<div>
-<a href="#">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
-</svg>
-</a>
-<span><strong>TOP</strong></span>
-</div>
+<a href="#">![Last Section](./img/oneArrow.png)</a> Scroll to Last Section
+<a href="#">![TOP](./img/twoArrow.png)</a> Scroll to Top
