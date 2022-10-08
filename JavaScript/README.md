@@ -37,7 +37,7 @@ JavaScript is a lightweight, interpreted, multi-paradigm language, and features 
 - [Node](#node)
   - [Run-Time Environment(RTE)](#run-time-environmentrte)
   - [Modules in Node](#modules-in-node)
-  - [Event Driven Programming](#event-driven-programming)
+  - [Event-Driven Programming](#event-driven-programming)
   - [The Event Loop](#the-event-loop)
 - [Functions. What are they?](#functions-what-are-they)
   - [Declaring a Function](#declaring-a-function)
@@ -55,7 +55,7 @@ JavaScript is a lightweight, interpreted, multi-paradigm language, and features 
   - [Conditional Execution](#conditional-execution)
   - [Anatomy of a Conditional](#anatomy-of-a-conditional)
   - [If-Else Block](#if-else-block)
-  - [the condensed if block](#the-condensed-if-block)
+  - [the condensed block](#the-condensed-block)
   - [Switch Statement](#switch-statement)
   - [Truthy Falsey](#truthy-falsey)
   - [Short Circuiting](#short-circuiting)
@@ -87,39 +87,39 @@ JavaScript is a lightweight, interpreted, multi-paradigm language, and features 
 
 # Installation and configuration
 
-Here are the installation steps to get you started writing some code and some recommended configurations that I like to setup personally when coding on a new computer. I am not super familiar with Linux, so I wont yet include that, ill add instructions for linux at a later date.
+Here are the installation steps to get you started writing some code and some recommended configurations that I like to set up personally when coding on a new computer. I am not super familiar with Linux, so I won't yet include that, ill add instructions for Linux at a later date.
 
 ## Brew | Mac
 
-Brew makes installing packages a lot easier than the classic method of goining to the website looking for the link and installing something. So ill walk through how to install Brew, since its something that I always use when setting up on a new computer
+Brew makes installing packages a lot easier than the classic method of going to the website looking for the link and installing something. So ill walk through how to install Brew, since its something that I always use when setting up a new computer
 
 1. First go to the official [Brew Website](https://brew.sh/) and check it out, there is no download link here.
 2. Then run this command in your terminal: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-3. Now your terminal will begin the installation process, at some point it may ask you to `press enter` or to `type an action` so keep an eye on the installation.
+3. Now your terminal will begin the installation process, at some point, it may ask you to `press enter` or to `type an action` so keep an eye on the installation.
 
-Note: if you are on an M1 or any other ARM based CPU (M1, M2 ...) you may be prompted to type in another two commands once the installation finishes
+Note: if you are on an M1 or any other ARM-based CPU (M1, M2 ...) you may be prompted to type in another two commands once the installation finishes
 
 - `echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile`
 - `eval "$(/opt/homebrew/bin/brew shellenv)"`
 
 ## VSCode | Mac
 
-First, go to the official [VSCode Website](https://code.visualstudio.com/), and you should arrive at a screen like this (may change in the future).
+First, go to the official [VSCode Website](https://code.visualstudio.com/), and you should arrive at a screen like this (which may change in the future).
 
 1. Once on a screen click on the `Download Mac Universal` Button
    ![step1](./img/install/mac/vscode/step1.png)
-2. From there a installation should install and you can go ahead and place the file on your `Desktop` for now.
+2. From there installation should install and you can go ahead and place the file on your `Desktop` for now.
    ![step2](./img/install/mac/vscode/step2.png)
 3. Once you place the file on your `Desktop` you should now have a zip file, double click on it to unzip the file, and then you should see the `VSCode` App. When you get the app open up your `Finder` and place `VSCode` in the `application` folder
    ![step3](./img/install/mac/vscode/step3.png)
 
-Thats it, you know have VSCode installed, I recommend once you start up VSCode, to install `code` you can do this by:
+That's it, you know have VSCode installed, I recommend once you start up VSCode, to install `code` you can do this by:
 
 1. Press `Command + Shift + P`
    ![step4](./img/install/mac/vscode/step4.png)
 2. type in `code`
    ![step5](./img/install/mac/vscode/step5.png)
-3. From here you may get a pop up asking you to type in your password, once you type it in you should get a `successfully installed` message
+3. From here you may get a pop-up asking you to type in your password, once you type it in you should get a `successfully installed` message
 4. This will allow us to open up a folder from our terminal using the `code` keyword like so
    ![step5](./img/install/mac/vscode/step6.png)
 5. When running this command it opens the directory that we are in as the root in VSCode, and from here we can get started on writing some code!
@@ -158,14 +158,14 @@ These are some tools that I would recommend installing
 
 # Running Programs
 
-There are two run-time environments in JavaScript, this is something covered in detail in the [Node](#node) section, but for now all that is really needed is to know that we can run our program:
+There are two run-time environments in JavaScript, this is something covered in detail in the [Node](#node) section, but for now, all that is really needed is to know that we can run our program:
 
 1. In our Web Browser (Google Chrome, Safari, Firefox, etc...)
 2. Or on our machines with Node
 
 ## Running in the browser
 
-1. Ensure that you have an HTML page in the same directory where you are writing you JavaScript code. Below is the minimum code we need to get our `<script></script>` connected to our JavaScript code
+1. Ensure that you have an HTML page in the same directory where you are writing your JavaScript code. Below is the minimum code we need to get our `<script></script>` connected to our JavaScript code
 
 ```HTML
 <!DOCTYPE html>
@@ -189,22 +189,22 @@ for (let i = 0; i < Math.random() * 1000; i++) {
 }
 ```
 
-3. Once we have our files setup you can use extensions like `live server` we install it from the `extensions` tab on the left hand tab.
+3. Once we have our files set up you can use extensions like `live server` we install it from the `extensions` tab on the left-hand tab.
    ![Live Server](./img/install/mac/extensions/liveserver.png)
 4. Once we have this installed, when you go into your HTML file you will see a button on the bottom right of your VSCode window that says `Go Live`, you should click on this, and a new window in your default browser will open.
-5. Now in the Browser you can open the browsers console a couple of ways.
+5. Now in the Browser you can open the browser's console a couple of ways.
    1. On a keyboard with all the F1-F12 keys press `F12` to open the console
-   2. On a keyboard without these keys, look for an `Fn` key, press `Fn` + `F12` In this case F12 might be a media key or something else
-   3. Right click anywhere in the browser window and click `inspect` then in the new window click on the tab labeled `console`
+   2. On a keyboard without these keys, look for an `Fn` key, and press `Fn` + `F12` In this case F12 might be a media key or something else
+   3. Right-click anywhere in the browser window and click `inspect` then in the new window click on the tab labeled `console`
       ![browser run example](./img/install/mac/extensions/browserRun.png)
-6. Now here in console we can right some code, but the code that we wrote in our JavaScript code, should already be showing up here, so as you write more code as long as you `console.log` it, it will show up here
+6. Nowhere in the console we can write some code, but the code that we wrote in our JavaScript code, should already be showing up here, so as you write more code as long as you `console.log` it, it will show up here
    ![running in the browser](./img/install/mac/extensions/browserLog.png)
 
 ## Running in Node
 
 To do this, you must have Node installed [Install Node | Mac](#node--mac) [Install Node | Windows](#node--win)
 
-1. With Node running our program is much simpler, we dont need an html file for this, all we need is a JavaScript file with our code
+1. With Node running our program is much simpler, we don't need an HTML file for this, all we need is a JavaScript file with our code
 
 ```JavaScript
 for (let i = 0; i < Math.random() * 1000; i++) {
@@ -214,7 +214,7 @@ for (let i = 0; i < Math.random() * 1000; i++) {
 
 2. Now open up a terminal window, you can do this in VScode by pressing `control` + `shift` + `\``
 3. make sure you are in the directory that holds your code
-4. run the command: `node {{name of JS file}}` In my case lets say the name of my file is `index.js` I would run `node index.js`. And this is it! as long as you have something being logged to the console with `console.log` you will see a result in the terminal window
+4. run the command: `node {{name of JS file}}` In my case let's say the name of my file is `index.js` I would run `node index.js`. And this is it! as long as you have something being logged to the console with `console.log` you will see a result in the terminal window
    ![running in node](./img/install/mac/extensions/terminalLog.png)
 
 # Hello World Program
@@ -229,7 +229,7 @@ What happens if we print the console object to the console? Short answer: we get
 
 ```JavaScript
 Object [console] { // Here we can see that indeed console is an object
-  log: [Function: log], // Here we see that log method that we have been using. And we can see that indeed it is a method(function)
+  log: [Function: log], // Here we see the log method that we have been using. And we can see that indeed it is a method(function)
   warn: [Function: warn],
   dir: [Function: dir],
   time: [Function: time],
@@ -256,7 +256,7 @@ Object [console] { // Here we can see that indeed console is an object
 }
 ```
 
-Hopefully, this gives some insight into how JavaScript works, we can see that there are pre-defined objects that we can call methods to execute tasks; This makes writing code a lot easier since we don't have to define all of this functionality ourselves. Now Ill summarize the important things we covered in this first block of code:
+Hopefully, this gives some insight into how JavaScript works, we can see that there are pre-defined objects that we can call methods to execute tasks; This makes writing code a lot easier since we don't have to define all of this functionality ourselves. Now I'll summarize the important things we covered in this first block of code:
 
 # JavaScript Best Practices
 
@@ -348,9 +348,9 @@ Abstraction
 
 # Node
 
-Node is the solution to writing JavaScript in the backend(servers). When JavaScript was created JavaScript by itself was not able to run on a server, unless we used frameworks or other work arounds to achieve this. So Node was created to fix this.
+Node is the solution to writing JavaScript in the backend(servers). When JavaScript was created JavaScript by itself was not able to run on a server, unless we used frameworks or other workarounds to achieve this. So Node was created to fix this.
 
-Node is not another language, it is still JavaScript, it is also not a framework, Node is a `run-time environment`. At a high level we can think of a run-time environment as the place where the code executes.
+Node is not another language, it is still JavaScript, it is also not a framework, Node is a `run-time environment`. At a high level, we can think of a run-time environment as the place where the code executes.
 
 ## Run-Time Environment(RTE)
 
@@ -365,7 +365,7 @@ When running code in the Browser:
 
 When Running Code in Node:
 
-- Code does access to our machines resources
+- Code does access our machine's resources
 - Does not have access to resources on our machine
 - Code can be run in the terminal
 
@@ -378,9 +378,9 @@ Code that is packaged up and ready to be imported into any project by the develo
 - OS (for interaction with the operating system)
 
 But there are many more and commonly we find them in package managers like Node Package Manager [NPM](https://www.npmjs.com/).
-Also any code that we write in Node can be imported and exported as a module throughout our code, to create abstraction, and separate our concerns in code.
+Also, any code that we write in Node can be imported and exported as a module throughout our code, to create an abstraction, and separate our concerns in code.
 
-## Event Driven Programming
+## Event-Driven Programming
 
 1. EventEmitter: The Event Emitter is the module that allows objects to communicate using. As the name implies an emitter will emit or send a signal for something to be done, for an emitter to send a signal, there is usually something happening in our program that triggers it like clicking on a button. When this happens a listener function that has been defined to listen to this specific signal from our emitter will catch the signal and execute some code.
 2. Events: Events can be many things, on web applications it could be hovering over a section on a website, clicking a button, submitting a form, dragging an item, and many other things. An event is something that the user can do on a website, and that is many things
@@ -404,7 +404,7 @@ Simply put a function in programming is like a container full of instructions. W
 
 ## Declaring a Function
 
-Most languages have a concept of a function, JavaScript has some functions resembling functions from languages like C++ or Java, and it has its special functions that are somewhat unique to JavaScript.
+Most languages have a concept of a function, JavaScript has some functions resembling functions from languages like C++ or Java, and it has special functions that are somewhat unique to JavaScript.
 
 Note:
 
@@ -702,7 +702,7 @@ and then we set our `else` block in the case that we pull a number that does not
 
 One more thing about if blocks
 
-## the condensed if block
+## the condensed block
 
 ```JavaScript
 if (2 < 3) console.log("this is true")
@@ -802,8 +802,8 @@ a?.b.c; // evaluate `a` first, then produce `undefined` if `a` is `null` or `und
 The way to read this is like so:
 
 1. The || operator looks to the left first, if this value is true it won't look to the right, it will return True
-2. The && operator will look to the left first, and if it is false it will return false, ignore what's on the right, if the first value on the left is true, it will look at the value on the right, and only that is true will it return true
-3. the ?? operator will see check if the value on the left is `null` or `undefined` first, if so it will return the value on the right. If not then it will check if the value on the right is `null` or `undefines` and return the value on the left.
+2. The && operator will look to the left first, and if it is false it will return false, ignoring what's on the right, if the first value on the left is true, it will look at the value on the right, and only that is true will it return true
+3. the ?? operator will see check if the value on the left is `null` or `undefined` first, if so it will return the value on the right. If not then it will check if the value on the right is `null` or `undefined` and return the value on the left.
 4. The ?. will look to the left first, if a is anything other than `null` or `undefined` it will check if b is true, and so on.
 
 Here is a link with a table describing the precedence of each operator [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table)
@@ -1163,7 +1163,7 @@ In this example we:
 3. place two parameters in our constructor `constructor(name, age){}`
 4. then we use the `this` keyword to create a variable local to the class scope `this.name` = to the argument passed in by the user `name`
 
-An example of us using this and creating an instance(object) based on this blueprint(class) would be like below:
+An example of us using this and creating an instance(object) based on this blueprint(class) would be like this below:
 
 ```JavaScript
 class ExampleClass {
@@ -1430,7 +1430,7 @@ console.log(sqr.getAreaSquare(12));
 | Just in Time Compilation     | refers to the way code is executed, Just in time compilation means that while executing it is also being compiled. In other words, you start running the code -> a block of code is compiled -> run that code -> then compile more code and continue the cycle until the whole program is executed. JavaScript works this way.                                                                                                                                                                                                                                    |
 | First Class Functions        | First class functions are a feature that some programming languages have, including JavaScript. It allows functions to be assigned to variables like any other primitive type. Example: `const exampleFunction = function(){}`                                                                                                                                                                                                                                                                                                                                    |
 | Higher Order Functions       | A feature of some programming languages, including JavaScript. It allows us to insert a function into the argument of another function. Example: Defining the functions `function example1(data){} function example2(){}` calling the functions `example1(example2)` In this example we define two functions; one that takes in a parameter `data`. and another that takes no arguments. then we can pass in the second function as that parameter `data` and in a real example, the function call would return something, by calling back to the second function |
-| Prototype Based Programming  | A concept of OOP, the idea is that we can reuse objects as `prototypes`. So while we are not changing the original function, we are changing and reusing a prototype of the existing function.                                                                                                                                                                                                                                                                                                                                                                    |
+| Prototype-Based Programming  | A concept of OOP, the idea is that we can reuse objects as `prototypes`. So while we are not changing the original function, we are changing and reusing a prototype of the existing function.                                                                                                                                                                                                                                                                                                                                                                    |
 | Programming Paradigm         | A way to classify an approach or style of programming. Often languages are built around specific paradigms, but languages can also support multiple paradigms; called multi-paradigm languages. you can learn more about the different paradigms here: [Programming Paradigms](https://www.indicative.com/resource/programming-paradigm/)                                                                                                                                                                                                                         |
 | Multi-Paradigm               | A programming language that supports multiple coding paradigms, popular ones are Object Oriented Programming(OOP), Functional Programming, and Procedural Programming. JavaScript is a language that is very flexible and supports OOP and functional programming                                                                                                                                                                                                                                                                                                 |
 | Single Threaded              | In programming the code we write has to be run on some part of the physical computer, code most of the time runs on a thread on the computer's CPU. JavaScript is famous for being single-threaded, meaning only one piece of code will run at a time and block any two processes from running concurrently. This has its Pros and Cons, and like most things in JavaScript, there are ways around the single-threaded nature of JavaScript; something called promises or asynchronous execution                                                                  |
