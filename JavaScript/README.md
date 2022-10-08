@@ -25,10 +25,8 @@ JavaScript is a lightweight, interpreted, multi-paradigm language, and features 
   - [Node | Windows](#node--windows)
   - [Other](#other)
 - [Running Programs](#running-programs)
-  - [Run-Time Environment(RTE)](#run-time-environmentrte)
-  - [Modules in Node](#modules-in-node)
-  - [Event Driven Programming](#event-driven-programming)
-  - [The Event Loop](#the-event-loop)
+  - [Running in the browser](#running-in-the-browser)
+  - [Running in Node](#running-in-node)
 - [Hello World Program](#hello-world-program)
 - [JavaScript Best Practices](#javascript-best-practices)
   - [JavaScript Typing](#javascript-typing)
@@ -36,6 +34,11 @@ JavaScript is a lightweight, interpreted, multi-paradigm language, and features 
   - [Naming Classes](#naming-classes)
   - [Other Naming Rules](#other-naming-rules)
   - [Abstraction](#abstraction)
+- [Node](#node)
+  - [Run-Time Environment(RTE)](#run-time-environmentrte)
+  - [Modules in Node](#modules-in-node)
+  - [Event Driven Programming](#event-driven-programming)
+  - [The Event Loop](#the-event-loop)
 - [Functions. What are they?](#functions-what-are-they)
   - [Declaring a Function](#declaring-a-function)
   - [The Classic Hoisted Function](#the-classic-hoisted-function)
@@ -195,6 +198,7 @@ for (let i = 0; i < Math.random() * 1000; i++) {
    3. Right click anywhere in the browser window and click `inspect` then in the new window click on the tab labeled `console`
       ![browser run example](./img/install/mac/extensions/browserRun.png)
 6. Now here in console we can right some code, but the code that we wrote in our JavaScript code, should already be showing up here, so as you write more code as long as you `console.log` it, it will show up here
+   ![running in the browser](./img/install/mac/extensions/browserLog.png)
 
 ## Running in Node
 
@@ -211,66 +215,7 @@ for (let i = 0; i < Math.random() * 1000; i++) {
 2. Now open up a terminal window, you can do this in VScode by pressing `control` + `shift` + `\``
 3. make sure you are in the directory that holds your code
 4. run the command: `node {{name of JS file}}` In my case lets say the name of my file is `index.js` I would run `node index.js`. And this is it! as long as you have something being logged to the console with `console.log` you will see a result in the terminal window
-
-# Node
-
-## Run-Time Environment(RTE)
-
-1. The Browser (Google Chrome, Firefox, Safari)
-
-   Running code in the Browser
-   Does not have access to resources on our machine
-   Has access to the Document Object Model(DOM)
-   Our code is tied to the <script> tag
-
-2. Node.JS
-   Running Code in Node.JS
-   Has access to our machines resources
-   Does not have access to resources on our machine
-   Our code can be run in the terminal
-
-## Modules in Node
-
-Code that is packaged up and ready to be imported into any project by the developer as needed. Popular modules include:
-HTTP and HTTPS (for web servers)
-FS (for file reading and writing)
-OS (for interaction with the operating system)
-But there are many more and commonly we find them in package managers like Node Package Manager (NPM).
-Also any code that we write in Node can be imported and exported as a module throughout our code, to create abstraction, and separate concerns.
-
-## Event Driven Programming
-
-For Speaker: Spend time on this slide to take notes and discuss the image.
-
-EventEmitter: The Event Emitter is the module that allows objects to communicate using. As the name implies an emitter will emit or send a signal for something to be done, for an emitter to send a signal, there is usually something happening in our program that triggers it like clicking on a button. When this happens a listener function that has been defined to listen to this specific signal from our emitter will catch the signal and execute some code.
-
-Events: Events can be many things, on web applications it could be hovering over a section on a website, clicking a button, submitting a form, dragging an item, and many other things. An event is something that the user can do on a website, and that is many things
-
-Event Loop: When an event is triggered it's like the green light for them to go through the event loop and find the function that corresponds to the event. Remember that each event that gets emitted corresponds to a specific listener that can act upon that event. We will cover the Event loop in more detail in the next slide.
-
-Event Handler: The event handler is a function that we define to listen to certain events, this function should provide some logic so that when it listens and finds the event it is looking for, it does an action, like sending data to a Database, redirect traffic to another page, change the state of the program or simply log something to the console. Like the name implies the function we define here should handle the event that it receives.
-
-Image source: https://www.geeksforgeeks.org/explain-event-driven-programming-in-node-js/
-
-## The Event Loop
-
-For Speaker: Spend time on this slide to take notes and discuss the image.
-
-EXPLAIN: Remember this is a closer look at the event loop from the last step.
-
-Requests going in: Requests coming are from when events are triggered, remember this can happen when a user clicks on a button or performs some other action that has an event emitter attached
-
-Event Queue: JavaScript is single-threaded, meaning that by default it can only perform one action at a time. But remember when we use nod we are using the Node run-time, and in the node run-time we can run code asynchronously. The event queue, as the name implies is a queue that holds a list of all the pending events that have been triggered that are waiting to find their listener function and execute a task. This model is known as the non-blocking model.
-
-Event Loop: When we have an event in the queue Node will get the oldest event that is the oldest first, and put it through the event loop, then the second oldest, etc... The event loop is an endless loop that waits for tasks to execute and then sleeps until it gets a new task to execute. That is the event loop simplified, it has steps in it that perform specific tasks at specific times, but that is a bit out of scope for this introduction to Node.
-
-Thread Pool: Not all events can be executed in one execution, some functionality completes a task properly that is taken care of in the event loop, but what we need to know now is that the thread loop is responsible for assigning CPU threads to events being executed in the event loop as needed. Remember how I mentioned the Node run-time has access to our machine resources? This is part of that, when we run a program using Node, it manages how our program interacts with the physical processing equipment in our computers.
-
-Operation Completed: Once an event is executed by the event loop, we can free up some space in our call stack(a list of events taking up threads) and return the event finished to the event emitter that started this sequence of events.
-
-Request going out: So following the task returning the request that was sent to be processed will now return an error if it errored, or return whatever value was expected when the process started
-
-Image source: https://www.geeksforgeeks.org/node-js-event-loop/
+   ![running in node](./img/install/mac/extensions/terminalLog.png)
 
 # Hello World Program
 
@@ -398,6 +343,60 @@ When we describe a function with this special comment we can hover over the func
 allows us to at a glance understand what a function is for, this comes in very handy with more complex functions, or when learning to use a new framework
 
 ## Abstraction
+
+Abstraction
+
+# Node
+
+Node is the solution to writing JavaScript in the backend(servers). When JavaScript was created JavaScript by itself was not able to run on a server, unless we used frameworks or other work arounds to achieve this. So Node was created to fix this.
+
+Node is not another language, it is still JavaScript, it is also not a framework, Node is a `run-time environment`. At a high level we can think of a run-time environment as the place where the code executes.
+
+## Run-Time Environment(RTE)
+
+1. The Browser (Google Chrome, Firefox, Safari)
+2. Node.JS
+
+When running code in the Browser:
+
+- Code does not have access to resources on our machine
+- Does Has access to the Document Object Model(DOM)
+- Code is tied to the <script> tag
+
+When Running Code in Node:
+
+- Code does access to our machines resources
+- Does not have access to resources on our machine
+- Code can be run in the terminal
+
+## Modules in Node
+
+Code that is packaged up and ready to be imported into any project by the developer as needed. Popular modules include:
+
+- HTTP and HTTPS (for web servers)
+- FS (for file reading and writing)
+- OS (for interaction with the operating system)
+
+But there are many more and commonly we find them in package managers like Node Package Manager [NPM](https://www.npmjs.com/).
+Also any code that we write in Node can be imported and exported as a module throughout our code, to create abstraction, and separate our concerns in code.
+
+## Event Driven Programming
+
+1. EventEmitter: The Event Emitter is the module that allows objects to communicate using. As the name implies an emitter will emit or send a signal for something to be done, for an emitter to send a signal, there is usually something happening in our program that triggers it like clicking on a button. When this happens a listener function that has been defined to listen to this specific signal from our emitter will catch the signal and execute some code.
+2. Events: Events can be many things, on web applications it could be hovering over a section on a website, clicking a button, submitting a form, dragging an item, and many other things. An event is something that the user can do on a website, and that is many things
+3. Event Loop: When an event is triggered it's like the green light for them to go through the event loop and find the function that corresponds to the event. Remember that each event that gets emitted corresponds to a specific listener that can act upon that event. We will cover the Event loop in more detail in the next slide.
+4. Event Handler: The event handler is a function that we define to listen to certain events, this function should provide some logic so that when it listens and finds the event it is looking for, it does an action, like sending data to a Database, redirect traffic to another page, change the state of the program or simply log something to the console. Like the name implies the function we define here should handle the event that it receives.
+
+## The Event Loop
+
+Remember this is a closer look at the event loop from the last step.
+
+1. Requests going in: Requests coming are from when events are triggered, remember this can happen when a user clicks on a button or performs some other action that has an event emitter attached
+2. Event Queue: JavaScript is single-threaded, meaning that by default it can only perform one action at a time. But remember when we use nod we are using the Node run-time, and in the node run-time we can run code asynchronously. The event queue, as the name implies is a queue that holds a list of all the pending events that have been triggered that are waiting to find their listener function and execute a task. This model is known as the non-blocking model.
+3. Event Loop: When we have an event in the queue Node will get the oldest event that is the oldest first, and put it through the event loop, then the second oldest, etc... The event loop is an endless loop that waits for tasks to execute and then sleeps until it gets a new task to execute. That is the event loop simplified, it has steps in it that perform specific tasks at specific times, but that is a bit out of scope for this introduction to Node.
+4. Thread Pool: Not all events can be executed in one execution, some functionality completes a task properly that is taken care of in the event loop, but what we need to know now is that the thread loop is responsible for assigning CPU threads to events being executed in the event loop as needed. Remember how I mentioned the Node run-time has access to our machine resources? This is part of that, when we run a program using Node, it manages how our program interacts with the physical processing equipment in our computers.
+5. Operation Completed: Once an event is executed by the event loop, we can free up some space in our call stack(a list of events taking up threads) and return the event finished to the event emitter that started this sequence of events.
+6. Request going out: So following the task returning the request that was sent to be processed will now return an error if it errored, or return whatever value was expected when the process started
 
 # Functions. What are they?
 
