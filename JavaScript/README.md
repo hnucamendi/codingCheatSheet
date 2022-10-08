@@ -382,7 +382,7 @@ Also, any code that we write in Node can be imported and exported as a module th
 
 ## Event-Driven Programming
 
-![Event-Driven Programming](./img/eventdriven.png)
+![Event-Driven Programming](./img/eventdrivenT.png)
 
 1. EventEmitter: The Event Emitter is the module that allows objects to communicate using. As the name implies an emitter will emit or send a signal for something to be done, for an emitter to send a signal, there is usually something happening in our program that triggers it like clicking on a button. When this happens a listener function that has been defined to listen to this specific signal from our emitter will catch the signal and execute some code.
 2. Events: Events can be many things, on web applications it could be hovering over a section on a website, clicking a button, submitting a form, dragging an item, and many other things. An event is something that the user can do on a website, and that is many things
@@ -391,7 +391,7 @@ Also, any code that we write in Node can be imported and exported as a module th
 
 ## The Event Loop
 
-![Event-Driven Programming](./img/eventloop.png)
+![Event-Driven Programming](./img/eventloopT.png)
 
 Remember this is a closer look at the event loop from the last step.
 
