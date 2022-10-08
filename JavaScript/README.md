@@ -15,8 +15,21 @@ JavaScript is a lightweight, interpreted, multi-paradigm language, and features 
 
 - [Welcome to JavaScript](#welcome-to-javascript)
 - [Table of Contents](#table-of-contents)
-- [Getting Started | Hello World Program](#getting-started--hello-world-program)
-  - [What happens if we print the console object to the console?](#what-happens-if-we-print-the-console-object-to-the-console)
+- [Installation and configuration](#installation-and-configuration)
+  - [Brew | Mac](#brew--mac)
+  - [VSCode | Mac](#vscode--mac)
+  - [Node | Mac](#node--mac)
+    - [Without Brew](#without-brew)
+    - [With Brew](#with-brew)
+  - [VSCode | Windows](#vscode--windows)
+  - [Node | Windows](#node--windows)
+  - [Other](#other)
+- [Running Programs](#running-programs)
+  - [Run-Time Environment(RTE)](#run-time-environmentrte)
+  - [Modules in Node](#modules-in-node)
+  - [Event Driven Programming](#event-driven-programming)
+  - [The Event Loop](#the-event-loop)
+- [Hello World Program](#hello-world-program)
 - [JavaScript Best Practices](#javascript-best-practices)
   - [JavaScript Typing](#javascript-typing)
   - [Naming Variables](#naming-variables)
@@ -69,17 +82,146 @@ JavaScript is a lightweight, interpreted, multi-paradigm language, and features 
 - [Vocabulary](#vocabulary)
 - [Code Along](#code-along)
 
-# Getting Started | Hello World Program
+# Installation and configuration
+
+Here are the installation steps to get you started writing some code and some recommended configurations that I like to setup personally when coding on a new computer. I am not super familiar with Linux, so I wont yet include that, ill add instructions for linux at a later date.
+
+## Brew | Mac
+
+Brew makes installing packages a lot easier than the classic method of goining to the website looking for the link and installing something. So ill walk through how to install Brew, since its something that I always use when setting up on a new computer
+
+1. First go to the official [Brew Website](https://brew.sh/) and check it out, there is no download link here.
+2. Then run this command in your terminal: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+3. Now your terminal will begin the installation process, at some point it may ask you to `press enter` or to `type an action` so keep an eye on the installation.
+
+Note: if you are on an M1 or any other ARM based CPU (M1, M2 ...) you may be prompted to type in another two commands once the installation finishes
+
+- `echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile`
+- `eval "$(/opt/homebrew/bin/brew shellenv)"`
+
+## VSCode | Mac
+
+First, go to the official [VSCode Website](https://code.visualstudio.com/), and you should arrive at a screen like this (may change in the future).
+
+1. Once on a screen click on the `Download Mac Universal` Button
+   ![step1](./img/install/mac/vscode/step1.png)
+2. From there a installation should install and you can go ahead and place the file on your `Desktop` for now.
+   ![step2](./img/install/mac/vscode/step2.png)
+3. Once you place the file on your `Desktop` you should now have a zip file, double click on it to unzip the file, and then you should see the `VSCode` App. When you get the app open up your `Finder` and place `VSCode` in the `application` folder
+   ![step3](./img/install/mac/vscode/step3.png)
+
+Thats it, you know have VSCode installed, I recommend once you start up VSCode, to install `code` you can do this by:
+
+1. Press `Command + Shift + P`
+   ![step4](./img/install/mac/vscode/step4.png)
+2. type in `code`
+   ![step5](./img/install/mac/vscode/step5.png)
+3. From here you may get a pop up asking you to type in your password, once you type it in you should get a `successfully installed` message
+4. This will allow us to open up a folder from our terminal using the `code` keyword like so
+   ![step5](./img/install/mac/vscode/step6.png)
+5. When running this command it opens the directory that we are in as the root in VSCode, and from here we can get started on writing some code!
+   ![step5](./img/install/mac/vscode/step7.png)
+
+## Node | Mac
+
+There are two installation methods, with Brew and without Brew, read over both before deciding which one you would like to use
+
+### Without Brew
+
+1. First go to the official [Node Webiste](https://nodejs.org/en/download/)
+2. Click on the
+   ![step1](img/install/mac/node/step1.png)
+3. Install the file to your desktop
+   ![step2](img/install/mac/node/step1.png)
+4. from here you can follow the installation instructions from the installer
+
+### With Brew
+
+1. Open a terminal window
+2. Run this command `Brew install node`
+
+Done! This is why I love brew, it just takes care of the whole process
+
+## VSCode | Windows
+
+## Node | Windows
+
+## Other
+
+These are some tools that I would recommend installing
+
+1. [Iterm2](https://iterm2.com/) with [oh-my-zsh](https://ohmyz.sh/) and the [powerlevel10k theme](https://github.com/romkatv/powerlevel10k)
+2. [Fira Code](https://github.com/tonsky/FiraCode) with ligaments enabled this font is really nice
+
+# Running Programs
+
+## Run-Time Environment(RTE)
+
+1. The Browser (Google Chrome, Firefox, Safari)
+
+   Running code in the Browser
+   Does not have access to resources on our machine
+   Has access to the Document Object Model(DOM)
+   Our code is tied to the <script> tag
+
+2. Node.JS
+   Running Code in Node.JS
+   Has access to our machines resources
+   Does not have access to resources on our machine
+   Our code can be run in the terminal
+
+## Modules in Node
+
+Code that is packaged up and ready to be imported into any project by the developer as needed. Popular modules include:
+HTTP and HTTPS (for web servers)
+FS (for file reading and writing)
+OS (for interaction with the operating system)
+But there are many more and commonly we find them in package managers like Node Package Manager (NPM).
+Also any code that we write in Node can be imported and exported as a module throughout our code, to create abstraction, and separate concerns.
+
+## Event Driven Programming
+
+For Speaker: Spend time on this slide to take notes and discuss the image.
+
+EventEmitter: The Event Emitter is the module that allows objects to communicate using. As the name implies an emitter will emit or send a signal for something to be done, for an emitter to send a signal, there is usually something happening in our program that triggers it like clicking on a button. When this happens a listener function that has been defined to listen to this specific signal from our emitter will catch the signal and execute some code.
+
+Events: Events can be many things, on web applications it could be hovering over a section on a website, clicking a button, submitting a form, dragging an item, and many other things. An event is something that the user can do on a website, and that is many things
+
+Event Loop: When an event is triggered it's like the green light for them to go through the event loop and find the function that corresponds to the event. Remember that each event that gets emitted corresponds to a specific listener that can act upon that event. We will cover the Event loop in more detail in the next slide.
+
+Event Handler: The event handler is a function that we define to listen to certain events, this function should provide some logic so that when it listens and finds the event it is looking for, it does an action, like sending data to a Database, redirect traffic to another page, change the state of the program or simply log something to the console. Like the name implies the function we define here should handle the event that it receives.
+
+Image source: https://www.geeksforgeeks.org/explain-event-driven-programming-in-node-js/
+
+## The Event Loop
+
+For Speaker: Spend time on this slide to take notes and discuss the image.
+
+EXPLAIN: Remember this is a closer look at the event loop from the last step.
+
+Requests going in: Requests coming are from when events are triggered, remember this can happen when a user clicks on a button or performs some other action that has an event emitter attached
+
+Event Queue: JavaScript is single-threaded, meaning that by default it can only perform one action at a time. But remember when we use nod we are using the Node run-time, and in the node run-time we can run code asynchronously. The event queue, as the name implies is a queue that holds a list of all the pending events that have been triggered that are waiting to find their listener function and execute a task. This model is known as the non-blocking model.
+
+Event Loop: When we have an event in the queue Node will get the oldest event that is the oldest first, and put it through the event loop, then the second oldest, etc... The event loop is an endless loop that waits for tasks to execute and then sleeps until it gets a new task to execute. That is the event loop simplified, it has steps in it that perform specific tasks at specific times, but that is a bit out of scope for this introduction to Node.
+
+Thread Pool: Not all events can be executed in one execution, some functionality completes a task properly that is taken care of in the event loop, but what we need to know now is that the thread loop is responsible for assigning CPU threads to events being executed in the event loop as needed. Remember how I mentioned the Node run-time has access to our machine resources? This is part of that, when we run a program using Node, it manages how our program interacts with the physical processing equipment in our computers.
+
+Operation Completed: Once an event is executed by the event loop, we can free up some space in our call stack(a list of events taking up threads) and return the event finished to the event emitter that started this sequence of events.
+
+Request going out: So following the task returning the request that was sent to be processed will now return an error if it errored, or return whatever value was expected when the process started
+
+Image source: https://www.geeksforgeeks.org/node-js-event-loop/
+
+# Hello World Program
+
+JavaScript does not require any boilerplate, or any previous configuration to get started. In our `Hello World` program, we use `console.log()` to print something to the console, in this case, a string that says `"Hello World"`. You may be asking, what is the console? and why `console.log`? `console` is an object with a lot of methods that can do many things to/on the console object; one of them being the `log` method which prints and displays something to the console.
 
 ```JavaScript
 console.log("Hello World");
 ```
 
-JavaScript does not require any boilerplate, or any previous configuration to get started. In our `Hello World` program, we use `console.log()` to print something to the console, in this case, a string that says `"Hello World"`. You may be asking, what is the console? and why `console.log`? `console` is an object with a lot of methods(Functions) that can do many things to/on the console object; one of them being the `log` method which prints and displays something to the console.
-
-## What happens if we print the console object to the console?
-
-Short answer: we get to see all the possible methods we can call on the console. For the long answer, we can go ahead and do just that. Here is the result from this code: `console.log(console)`:
+What happens if we print the console object to the console? Short answer: we get to see all the possible methods we can call on the console. For the long answer, we can go ahead and do just that. Here is the result from this code: `console.log(console)`:
 
 ```JavaScript
 Object [console] { // Here we can see that indeed console is an object
@@ -110,14 +252,7 @@ Object [console] { // Here we can see that indeed console is an object
 }
 ```
 
-Hopefully, this gives some insight into how JavaScript works, we can see that there are pre-defined objects that we can call methods(functions) upon to execute tasks; This makes writing code a lot easier since we don't have to define all of this functionality ourselves. Now Ill summarize the important things we covered in this first block of code:
-
-- Object
-  - Some languages have this same concept in different variations, its a group of code or data that is paired/organized in `key value pairs` `{age: 44}`
-- Method(Function)
-  - A method is the name for a function when it is part of an object, though it is the same as a function in practice, we give it a different name to differentiate
-- Boilerplate Code
-  - A block of code that is required for the compiler to understand how to read the code. JavaScript does not have boilerplate code
+Hopefully, this gives some insight into how JavaScript works, we can see that there are pre-defined objects that we can call methods to execute tasks; This makes writing code a lot easier since we don't have to define all of this functionality ourselves. Now Ill summarize the important things we covered in this first block of code:
 
 # JavaScript Best Practices
 
