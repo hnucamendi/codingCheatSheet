@@ -85,6 +85,24 @@ JavaScript is a lightweight, interpreted, multi-paradigm language, and features 
 - [Vocabulary](#vocabulary)
 - [Code Along](#code-along)
 
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>LAST SECTION</strong></span>
+</div>
+
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>TOP</strong></span>
+</div>
+
 # Installation and configuration
 
 Here are the installation steps to get you started writing some code and some recommended configurations that I like to set up personally when coding on a new computer. I am not super familiar with Linux, so I won't yet include that, ill add instructions for Linux at a later date.
@@ -156,6 +174,24 @@ These are some tools that I would recommend installing
 1. [Iterm2](https://iterm2.com/) with [oh-my-zsh](https://ohmyz.sh/) and the [powerlevel10k theme](https://github.com/romkatv/powerlevel10k)
 2. [Fira Code](https://github.com/tonsky/FiraCode) with ligaments enabled this font is really nice
 
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>LAST SECTION</strong></span>
+</div>
+
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>TOP</strong></span>
+</div>
+
 # Running Programs
 
 There are two run-time environments in JavaScript, this is something covered in detail in the [Node](#node) section, but for now, all that is really needed is to know that we can run our program:
@@ -216,6 +252,24 @@ for (let i = 0; i < Math.random() * 1000; i++) {
 3. make sure you are in the directory that holds your code
 4. run the command: `node {{name of JS file}}` In my case let's say the name of my file is `index.js` I would run `node index.js`. And this is it! as long as you have something being logged to the console with `console.log` you will see a result in the terminal window
    ![running in node](./img/install/mac/extensions/terminalLog.png)
+
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>LAST SECTION</strong></span>
+</div>
+
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>TOP</strong></span>
+</div>
 
 # Hello World Program
 
@@ -346,6 +400,24 @@ allows us to at a glance understand what a function is for, this comes in very h
 
 Abstraction
 
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>LAST SECTION</strong></span>
+</div>
+
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>TOP</strong></span>
+</div>
+
 # Node
 
 Node is the solution to writing JavaScript in the backend(servers). When JavaScript was created JavaScript by itself was not able to run on a server, unless we used frameworks or other workarounds to achieve this. So Node was created to fix this.
@@ -401,6 +473,24 @@ Remember this is a closer look at the event loop from the last step.
 4. Thread Pool: Not all events can be executed in one execution, some functionality completes a task properly that is taken care of in the event loop, but what we need to know now is that the thread loop is responsible for assigning CPU threads to events being executed in the event loop as needed. Remember how I mentioned the Node run-time has access to our machine resources? This is part of that, when we run a program using Node, it manages how our program interacts with the physical processing equipment in our computers.
 5. Operation Completed: Once an event is executed by the event loop, we can free up some space in our call stack(a list of events taking up threads) and return the event finished to the event emitter that started this sequence of events.
 6. Request going out: So following the task returning the request that was sent to be processed will now return an error if it errored, or return whatever value was expected when the process started
+
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>LAST SECTION</strong></span>
+</div>
+
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>TOP</strong></span>
+</div>
 
 # Functions. What are they?
 
@@ -574,6 +664,24 @@ console.log(sayHello('Samny')); //Returns "Hello Samny"
 // The shorthand would be like so:
 const sayHello = (name) => 'Hello ' + name;
 ```
+
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>LAST SECTION</strong></span>
+</div>
+
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>TOP</strong></span>
+</div>
 
 # Control Flow
 
@@ -837,6 +945,24 @@ console.log(c); // Returns false
 console.log(d); // Returns "Hello"
 ```
 
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>LAST SECTION</strong></span>
+</div>
+
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>TOP</strong></span>
+</div>
+
 # Objects
 
 Objects in JavaScript hold a collection of properties, we define our properties in objects in `key pair` values. The key is the identifier, and the value is the property value. We can add primitive variables, functions, or other objects as valid properties. When we define a function inside of a method, we call that a Method, instead of a Function.
@@ -979,6 +1105,24 @@ console.log(car.getGasTank()); // Returns 88
 
 Quite an extensive example, hopefully, you took some time to fully go over the code and understand it, a quick note on objects though. Imagine if anytime we wanted to make a new car we would have to write <b>EVERY</b> `method`, `variable`, `object`, `array`, and anything else that your car might have. It would be impossible to make enough cars for the whole world without making mistakes. That is why we have classes! Spoiler alert Classes are the blueprints to create objects, and there is a section that describes all about how classes work [Here](#classes).
 
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>LAST SECTION</strong></span>
+</div>
+
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>TOP</strong></span>
+</div>
+
 # Arrays
 
 our last section on objects covered how we can make some items that can hold various properties organized by key pair values. And a perfect example of an object is Arrays. Arrays are just an object that is pre-defined for us to use in JavaScript, meaning that arrays have methods
@@ -1120,6 +1264,24 @@ console.log(Object.getOwnPropertyNames(Array));
 ```
 
 These methods are useful because it allows us to write less code, and get a lot done. But since we are writing less code and using a predefined method, using too many methods creates a lot of abstraction. Sometimes this can be bad for beginner programmers. Abstraction is covered [here](#abstraction)
+
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>LAST SECTION</strong></span>
+</div>
+
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>TOP</strong></span>
+</div>
 
 # Classes
 
@@ -1274,6 +1436,24 @@ console.log(john.listCars());
 console.log(john.whoAmI());
 ```
 
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>LAST SECTION</strong></span>
+</div>
+
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>TOP</strong></span>
+</div>
+
 # Before ES6
 
 JavaScript has two major versions of the language; before EcmaScript6(ES6) and after ES6. Before ES6 a lot of the language was rushed and some features were not fully thought out or implemented to solve short-term problems, not long-term problems. Everything in this section will cover parts of JavaScript that came before the release of ES6.
@@ -1419,6 +1599,24 @@ console.log(rec.getAreaRectangle(6, 12));
 console.log(sqr.getAreaSquare(12));
 ```
 
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>LAST SECTION</strong></span>
+</div>
+
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>TOP</strong></span>
+</div>
+
 # History | FAQ
 
 ## Are Java and JavaScript Related?
@@ -1426,6 +1624,24 @@ console.log(sqr.getAreaSquare(12));
 ## What is EcmaScript
 
 ## Why is ES6 so special?
+
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>LAST SECTION</strong></span>
+</div>
+
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>TOP</strong></span>
+</div>
 
 # Vocabulary
 
@@ -1456,9 +1672,45 @@ console.log(sqr.getAreaSquare(12));
 | Arguments                    | Arguments are passed in a function call (when invoking a function) to be used in the code the function executes. These variables are local to the specific function                                                                                                                                                                                                                                                                                                                                                                                               |
 | Parameters                   | Parameters are used in a function definition to initialize local variables that are expected to be passed in later when calling(invoking) the function                                                                                                                                                                                                                                                                                                                                                                                                            |
 
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>LAST SECTION</strong></span>
+</div>
+
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>TOP</strong></span>
+</div>
+
 # Code Along
 
 Once you have finished reading the documentation, or if you would like to practice some of the concepts as you go along, feel free to use the `codeAlong.js` sheet also in this folder. One helpful tip to comment and uncomment code is to:
 
 1. Highlight the code you wish to comment on or uncomment
 2. press `cmd + /` on mac or `ctrl + /` on windows
+
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px" align=center>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>LAST SECTION</strong></span>
+</div>
+
+<div>
+<a href="#">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6" width="34px" height="34px">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+</svg>
+</a>
+<span><strong>TOP</strong></span>
+</div>
