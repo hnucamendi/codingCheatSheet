@@ -166,7 +166,7 @@ First, go to the official [VSCode Website](https://code.visualstudio.com/), and 
    ![step2](./img/install/win/vscode/step2.png)
 3. Once you place the file on your `Desktop` you should now have an exe file, double click it and follow the installation process. When you get the app open up you are ready to go
 
-That's it, you know have VSCode installed, unlike on mac code is already available for you to use, so you dont have to install that seperatley
+That's it, you know have VSCode installed, unlike on mac code is already available for you to use, so you don't have to install that separately
 
 ## Node | Windows
 
@@ -184,9 +184,9 @@ That's it, you know have VSCode installed, unlike on mac code is already availab
 
 ---
 
-| <strong>[Scroll to Last Section](#installation-and-configuration)</strong> |
-| <strong>[Scroll to Last Section](#table-of-contents)</strong> |
-| <strong>[Scroll to Top](#welcome-to-javascript)</strong> |
+| <strong>[Scroll to top of section](#installation-and-configuration)</strong> |
+| <strong>[Scroll to last section](#table-of-contents)</strong> |
+| <strong>[Scroll to top of page](#welcome-to-javascript)</strong> |
 
 ---
 
@@ -253,9 +253,9 @@ for (let i = 0; i < Math.random() * 1000; i++) {
 
 ---
 
-| <strong>[Scroll to Last Section](#running-programs)</strong> |
-| <strong>[Scroll to Last Section](#installation-and-configuration)</strong> |
-| <strong>[Scroll to Top](#welcome-to-javascript)</strong> |
+| <strong>[Scroll to top of section](#running-programs)</strong> |
+| <strong>[Scroll to last section](#installation-and-configuration)</strong> |
+| <strong>[Scroll to top of page](#welcome-to-javascript)</strong> |
 
 ---
 
@@ -302,9 +302,9 @@ Hopefully, this gives some insight into how JavaScript works, we can see that th
 
 ---
 
-| <strong>[Scroll to Last Section](#hello-world-program)</strong> |
-| <strong>[Scroll to Last Section](#running-programs)</strong> |
-| <strong>[Scroll to Top](#welcome-to-javascript)</strong> |
+| <strong>[Scroll to top of section](#hello-world-program)</strong> |
+| <strong>[Scroll to last section](#running-programs)</strong> |
+| <strong>[Scroll to top of page](#welcome-to-javascript)</strong> |
 
 ---
 
@@ -398,9 +398,9 @@ Abstraction
 
 ---
 
-| <strong>[Scroll to Last Section](#javascript-best-practices)</strong> |
-| <strong>[Scroll to Last Section](#hello-world-program)</strong> |
-| <strong>[Scroll to Top](#welcome-to-javascript)</strong> |
+| <strong>[Scroll to top of section](#javascript-best-practices)</strong> |
+| <strong>[Scroll to last section](#hello-world-program)</strong> |
+| <strong>[Scroll to top of page](#welcome-to-javascript)</strong> |
 
 ---
 
@@ -462,9 +462,9 @@ Remember this is a closer look at the event loop from the last step.
 
 ---
 
-| <strong>[Scroll to Last Section](#node)</strong> |
-| <strong>[Scroll to Last Section](#javascript-best-practices)</strong> |
-| <strong>[Scroll to Top](#welcome-to-javascript)</strong> |
+| <strong>[Scroll to top of section](#node)</strong> |
+| <strong>[Scroll to last section](#javascript-best-practices)</strong> |
+| <strong>[Scroll to top of page](#welcome-to-javascript)</strong> |
 
 ---
 
@@ -567,7 +567,7 @@ helloWorld() // returns "Hello World from an Arrow Function"
 
 ## Declaring and Invoking Factory Functions
 
-Factory functions are functions that return objects, simple, it works kind of like a `class` but remember there are many way to accomplish the same thing in JavaScript. A factory function is really defined by what is reuturned so it can be hoisted, non hoisted, or arrow function.
+Factory functions are functions that return objects, simple, it works kind of like a `class` but remember there are many ways to accomplish the same thing in JavaScript. A factory function is really defined by what is returned so it can be hoisted, non-hoisted, or arrow function.
 
 ```JavaScript
 function person(firstName, lastName, age, job) {
@@ -584,7 +584,7 @@ const p = person("John", "Doe", 34, "worker");
 console.log(p); // Returns { firstName: 'John', lastName: 'Doe', age: 34, job: 'worker' }
 ```
 
-In practice you probably wont encounter factory functions, classes and constructors are preffered, but its good to know this is possible.s
+In practice you probably won't encounter factory functions, classes and constructors are preferred, but it's good to know this is possible.s
 
 ## Declaring and Invoking Anonymous Functions
 
@@ -666,9 +666,11 @@ const sayHello = (name) => 'Hello ' + name;
 
 [Click Here](./code-along/functions/functions.js)
 
-| <strong>[Scroll to Last Section](#functions-what-are-they)</strong> |
-| <strong>[Scroll to Last Section](#node)</strong> |
-| <strong>[Scroll to Top](#welcome-to-javascript)</strong> |
+---
+
+| <strong>[Scroll to top of section](#functions-what-are-they)</strong> |
+| <strong>[Scroll to last section](#node)</strong> |
+| <strong>[Scroll to top of page](#welcome-to-javascript)</strong> |
 
 ---
 
@@ -936,9 +938,9 @@ console.log(d); // Returns "Hello"
 
 ---
 
-| <strong>[Scroll to Last Section](#control-flow)</strong> |
-| <strong>[Scroll to Last Section](#functions-what-are-they)</strong> |
-| <strong>[Scroll to Top](#welcome-to-javascript)</strong> |
+| <strong>[Scroll to top of section](#control-flow)</strong> |
+| <strong>[Scroll to last section](#functions-what-are-they)</strong> |
+| <strong>[Scroll to top of page](#welcome-to-javascript)</strong> |
 
 ---
 
@@ -1086,7 +1088,7 @@ Quite an extensive example, hopefully, you took some time to fully go over the c
 
 ## Object Destructuring
 
-Lets use this pretty big object as an example, imagine if we wanted to print the `color` to the `console` but only the color, and we have no need at all for the rest of the object. This may not be realistic in this example but situations like these are common. We can use Destructuring to break apart an object and get ONLY the property or properties that we need.
+Let's use this pretty big object as an example, imagine if we wanted to print the `color` to the `console` but only the color, and we have no need at all for the rest of the object. This may not be realistic in this example but situations like these are common. We can use Destructuring to break apart an object and get ONLY the property or properties that we need.
 
 ```JavaScript
 const car = {
@@ -1133,7 +1135,7 @@ const { color } = car // Returns "red"
 ```
 
 The way we read this is:
-`initialize a color varialbe, get the value of color from the car object, and put it in this new color variable`. For this to work the `color` variable must be a variable that exists in the object
+`initialize a color variable, get the value of color from the car object, and put it in this new color variable`. For this to work the `color` variable must be a variable that exists in the object
 
 this is the syntax that we call destructuring, it has the same functionality as this syntax:
 
@@ -1141,7 +1143,7 @@ this is the syntax that we call destructuring, it has the same functionality as 
 const color = car.color
 ```
 
-Here is another example, in this example we rename the variables after destructuring them
+Here is another example, in this example, we rename the variables after destructuring them
 
 ```JavaScript
 const testObj = {
@@ -1163,9 +1165,9 @@ console.log(info.age); // Returns 32
 
 ---
 
-| <strong>[Scroll to Last Section](#objects)</strong> |
-| <strong>[Scroll to Last Section](#control-flow)</strong> |
-| <strong>[Scroll to Top](#welcome-to-javascript)</strong> |
+| <strong>[Scroll to top of section](#objects)</strong> |
+| <strong>[Scroll to last section](#control-flow)</strong> |
+| <strong>[Scroll to top of page](#welcome-to-javascript)</strong> |
 
 ---
 
@@ -1342,9 +1344,9 @@ console.log(jName);
 
 ---
 
-| <strong>[Scroll to Last Section](#arrays)</strong> |
-| <strong>[Scroll to Last Section](#objects)</strong> |
-| <strong>[Scroll to Top](#welcome-to-javascript)</strong> |
+| <strong>[Scroll to top of section](#arrays)</strong> |
+| <strong>[Scroll to last section](#objects)</strong> |
+| <strong>[Scroll to top of page](#welcome-to-javascript)</strong> |
 
 ---
 
@@ -1503,9 +1505,9 @@ console.log(john.whoAmI());
 
 ---
 
-| <strong>[Scroll to Last Section](#classes)</strong> |
-| <strong>[Scroll to Last Section](#arrays)</strong> |
-| <strong>[Scroll to Top](#welcome-to-javascript)</strong> |
+| <strong>[Scroll to top of section](#classes)</strong> |
+| <strong>[Scroll to last section](#arrays)</strong> |
+| <strong>[Scroll to top of page](#welcome-to-javascript)</strong> |
 
 ---
 
@@ -1656,9 +1658,9 @@ console.log(sqr.getAreaSquare(12));
 
 ---
 
-| <strong>[Scroll to Last Section](#before-es6)</strong> |
-| <strong>[Scroll to Last Section](#classes)</strong> |
-| <strong>[Scroll to Top](#welcome-to-javascript)</strong> |
+| <strong>[Scroll to top of section](#before-es6)</strong> |
+| <strong>[Scroll to last section](#classes)</strong> |
+| <strong>[Scroll to top of page](#welcome-to-javascript)</strong> |
 
 ---
 
@@ -1672,9 +1674,9 @@ console.log(sqr.getAreaSquare(12));
 
 ---
 
-| <strong>[Scroll to Last Section](#history--faq)</strong> |
-| <strong>[Scroll to Last Section](#before-es6)</strong> |
-| <strong>[Scroll to Top](#welcome-to-javascript)</strong> |
+| <strong>[Scroll to top of section](#history--faq)</strong> |
+| <strong>[Scroll to last section](#before-es6)</strong> |
+| <strong>[Scroll to top of page](#welcome-to-javascript)</strong> |
 
 ---
 
@@ -1709,9 +1711,9 @@ console.log(sqr.getAreaSquare(12));
 
 ---
 
-| <strong>[Scroll to Last Section](#vocabulary)</strong> |
-| <strong>[Scroll to Last Section](#history--faq)</strong> |
-| <strong>[Scroll to Top](#welcome-to-javascript)</strong> |
+| <strong>[Scroll to top of section](#vocabulary)</strong> |
+| <strong>[Scroll to last section](#history--faq)</strong> |
+| <strong>[Scroll to top of page](#welcome-to-javascript)</strong> |
 
 ---
 
@@ -1724,8 +1726,10 @@ Once you have finished reading the documentation, or if you would like to practi
 
 ---
 
-| <strong>[Scroll to Last Section](#code-along)</strong> |
-| <strong>[Scroll to Last Section](#vocabulary)</strong> |
-| <strong>[Scroll to Top](#welcome-to-javascript)</strong> |
+| <strong>[Scroll to top of section](#code-along)</strong> |
+| <strong>[Scroll to last section](#vocabulary)</strong> |
+| <strong>[Scroll to top of page](#welcome-to-javascript)</strong> |
 
 ---
+
+s

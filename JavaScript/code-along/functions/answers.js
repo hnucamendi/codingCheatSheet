@@ -6,10 +6,16 @@
  */
 
 function distance(a, b) {
-  return b - a;
+  if (b < a) return a - b;
+  if (a < b) return b - a;
 }
 
-// console.log(distance(-5, -1));
+console.table({
+  distance1: distance(16, 6),
+  distance2: distance(9, 20),
+  distance3: distance(-5, -1),
+});
+console.log("****************************************************************");
 
 /**
  * Create a function that takes in two arrays of numbers that represent distance in miles
@@ -43,11 +49,21 @@ function distanceWithArrays(a, b) {
   return arr;
 }
 
-// console.log(
-//   distanceWithArrays([9, 8, 7, 6, 5, 4, 3, 2, 1], [1, 2, 3, 4, 5, 6, 7, 8, 9])
-// );
-// console.log(distanceWithArrays([9, 8], [1, 2, 3, 4, 5, 6, 7, 8, 9]));
-// console.log(distanceWithArrays([9, 8, 7, 6, 5, 4, 3, 2, 1], [1, 2]));
+console.table({
+  distanceWithArrays1: distanceWithArrays(
+    [9, 8, 7, 6, 5, 4, 3, 2, 1],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  ),
+});
+
+console.table({
+  distanceWithArrays2: distanceWithArrays([9, 8], [1, 2, 3, 4, 5, 6, 7, 8, 9]),
+});
+
+console.table({
+  distanceWithArrays3: distanceWithArrays([9, 8, 7, 6, 5, 4, 3, 2, 1], [1, 2]),
+});
+console.log("****************************************************************");
 
 /**
  * Create a function that returns a string of text
@@ -63,7 +79,8 @@ function test2() {
   return "Hello World ";
 }
 
-// console.log(test(test2()));
+console.table({ callback: test(test2()) });
+console.log("****************************************************************");
 
 /**
  * Create a function that can calculate the tip for a meal
@@ -76,7 +93,8 @@ function tip(bill, percentage) {
   return (bill + bill * percentage).toFixed(2);
 }
 
-// console.log(tip(20.43, 0.2));
+console.table({ tips: tip(20.43, 0.2) });
+console.log("****************************************************************");
 
 /**
  * Create a function that can calculate the tip for a meal
@@ -94,5 +112,6 @@ function tipWithPeople(bill, percentage, people = 1) {
   else return `Total: ${bill}`;
 }
 
-console.log(tipWithPeople(20.43, 0.2));
-console.log(tipWithPeople(20.43, 0.2, 3));
+console.table({ tipWithPeople1: tipWithPeople(20.43, 0.2) });
+console.table({ tipWithPeople2: tipWithPeople(20.43, 0.2, 3) });
+console.log("****************************************************************");

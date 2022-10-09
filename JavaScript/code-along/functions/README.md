@@ -97,7 +97,7 @@ helloWorld() // returns "Hello World from an Arrow Function"
 
 ## Declaring and Invoking Factory Functions
 
-Factory functions are functions that return objects, simple, it works kind of like a `class` but remember there are many way to accomplish the same thing in JavaScript. A factory function is really defined by what is reuturned so it can be hoisted, non hoisted, or arrow function.
+Factory functions are functions that return objects, simple, it works kind of like a `class` but remember there are many ways to accomplish the same thing in JavaScript. A factory function is really defined by what is returned so it can be hoisted, non-hoisted, or arrow function.
 
 ```JavaScript
 function person(firstName, lastName, age, job) {
@@ -114,7 +114,7 @@ const p = person("John", "Doe", 34, "worker");
 console.log(p); // Returns { firstName: 'John', lastName: 'Doe', age: 34, job: 'worker' }
 ```
 
-In practice you probably wont encounter factory functions, classes and constructors are preffered, but its good to know this is possible.s
+In practice you probably won't encounter factory functions, classes and constructors are preferred, but it's good to know this is possible.s
 
 ## Declaring and Invoking Anonymous Functions
 
