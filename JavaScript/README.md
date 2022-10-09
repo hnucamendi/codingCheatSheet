@@ -62,10 +62,12 @@ JavaScript is a lightweight, interpreted, multi-paradigm language, and features 
 - [Objects](#objects)
   - [Defining an Object](#defining-an-object)
   - [What can Objects hold?](#what-can-objects-hold)
+  - [Object Destructuring](#object-destructuring)
 - [Arrays](#arrays)
   - [Defining an Array](#defining-an-array)
   - [Arrays and their Index](#arrays-and-their-index)
   - [Array Methods](#array-methods)
+  - [Array Destructuring](#array-destructuring)
 - [Classes](#classes)
   - [Class Definition](#class-definition)
   - [Class Expression](#class-expression)
@@ -1057,6 +1059,83 @@ console.log(car.getGasTank()); // Returns 88
 
 Quite an extensive example, hopefully, you took some time to fully go over the code and understand it, a quick note on objects though. Imagine if anytime we wanted to make a new car we would have to write <b>EVERY</b> `method`, `variable`, `object`, `array`, and anything else that your car might have. It would be impossible to make enough cars for the whole world without making mistakes. That is why we have classes! Spoiler alert Classes are the blueprints to create objects, and there is a section that describes all about how classes work [Here](#classes).
 
+## Object Destructuring
+
+Lets use this pretty big object as an example, imagine if we wanted to print the `color` to the `console` but only the color, and we have no need at all for the rest of the object. This may not be realistic in this example but situations like these are common. We can use Destructuring to break apart an object and get ONLY the property or properties that we need.
+
+```JavaScript
+const car = {
+  carName: "fast nd furious",
+  color: "red",
+  make: "Honda",
+  model: "Civic",
+  miles: 0,
+  distanceToWork: 0,
+  gasTank: 100,
+  musicInCar: ["Royalty free playlist"],
+  trashUnderSeats: {
+    leftSeat: ["gum", "stickers"],
+    rightSeat: ["winter glove", "cheese"],
+  },
+  addMusic: function (music) {
+    this.musicInCar.push(music);
+  },
+  getMusic: function () {
+    return this.musicInCar;
+  },
+  setDistance: function (value) {
+    this.distanceToWork = value;
+  },
+  getDistance: function () {
+    return this.distanceToWork;
+  },
+  driveToWork: function () {
+    this.gasTank -= this.distanceToWork;
+    return `Drove ${this.distanceToWork} miles, and now ${this.carName} has ${
+      this.miles + this.distanceToWork
+    } miles`;
+  },
+  canIGetToWork: function () {
+    if (this.gasTank > this.distanceToWork) return "Yes, you can drive to work";
+    return "No, you can't drive to work";
+  },
+  getGasTank: function () {
+    return this.gasTank;
+  },
+};
+
+const { color } = car // Returns "red"
+```
+
+The way we read this is:
+`initialize a color varialbe, get the value of color from the car object, and put it in this new color variable`. For this to work the `color` variable must be a variable that exists in the object
+
+this is the syntax that we call destructuring, it has the same functionality as this syntax:
+
+```JavaScript
+const color = car.color
+```
+
+Here is another example, in this example we rename the variables after destructuring them
+
+```JavaScript
+const testObj = {
+  date: "2001-06-02",
+  data: {
+    name: "John",
+    age: 32,
+  },
+};
+
+const { date: d } = testObj;
+const { data: info } = testObj;
+
+console.log(d); // Returns "2001-06-02"
+console.log(info); // Returns { name: "John", age: 32 }
+console.log(info.name); // Returns "John"
+console.log(info.age); // Returns 32
+```
+
 ---
 
 | <strong>[Scroll to Last Section](#objects)</strong> |
@@ -1206,6 +1285,35 @@ console.log(Object.getOwnPropertyNames(Array));
 ```
 
 These methods are useful because it allows us to write less code, and get a lot done. But since we are writing less code and using a predefined method, using too many methods creates a lot of abstraction. Sometimes this can be bad for beginner programmers. Abstraction is covered [here](#abstraction)
+
+## Array Destructuring
+
+The functionality of destructuring arrays is exactly the same as it is for objects. The only difference is the syntax we use for arrays.
+
+Say we have an array of names mixed in with some numbers
+
+```JavaScript
+const names = ["John", "Jane", 432, 592];
+
+const [name, [letter1, letter2], ...numbers] = names;
+
+console.log(name); // Returns "John"
+console.log(letter1); // Returns "J"
+console.log(letter2); // Returns "a"
+console.log(numbers); // Returns [432, 592]
+```
+
+As you can see each index that we destructure is tied to match the index from the original array, and we can nest destructuring to get individual values of an item like we did to get the first two letters of the second item in our `names` array
+
+We can also create default values, in the case that the value that we are destructing in the original array is undefined or null, it will use the default value.
+
+```JavaScript
+const test = ["James"];
+
+const [name = "John"] = test;
+
+console.log(jName);
+```
 
 ---
 
