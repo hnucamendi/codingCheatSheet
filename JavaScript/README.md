@@ -1747,5 +1747,3 @@ Once you have finished reading the documentation, or if you would like to practi
 | <strong>[Scroll to top of page](#welcome-to-javascript)</strong> |
 
 ---
-
-s
