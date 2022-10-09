@@ -163,9 +163,9 @@ These are some tools that I would recommend installing
 First, go to the official [VSCode Website](https://code.visualstudio.com/), and you should arrive at a screen like this (which may change in the future).
 
 1. Once on a screen click on the `Download Mac Universal` Button
-   ![step1](./img/install/win/vscode/step1.PNG)
+   ![step1](./img/install/win/vscode/step1.png)
 2. From there installation should install and you can go ahead and place the file on your `Desktop` for now.
-   ![step2](./img/install/win/vscode/step2.PNG)
+   ![step2](./img/install/win/vscode/step2.png)
 3. Once you place the file on your `Desktop` you should now have an exe file, double click it and follow the installation process. When you get the app open up you are ready to go
 
 That's it, you know have VSCode installed, unlike on mac code is already available for you to use, so you dont have to install that seperatley
@@ -174,19 +174,15 @@ That's it, you know have VSCode installed, unlike on mac code is already availab
 
 1. First go to the official [Node Webiste](https://nodejs.org/en/download/)
 2. Click on the
-   ![step1](./img/install/win/node/step1.PNG)
+   ![step1](./img/install/win/node/step1.png)
 3. Install the file to your desktop
-   ![step2](./img/install/win/node/step2.PNG)
+   ![step2](./img/install/win/node/step2.png)
 4. from here you can follow the installation instructions from the installer
-   ![step3](./img/install/win/node/step3.PNG)
-5. 
-   ![step4](./img/install/win/node/step4.PNG)
-5. 
-   ![step5](./img/install/win/node/step5.PNG)
-6. 
-   ![step6](./img/install/win/node/step6.PNG)
-7. 
-   ![step7](./img/install/win/node/step7.PNG)
+   ![step3](./img/install/win/node/step3.png)
+5. ![step4](./img/install/win/node/step4.png)
+6. ![step5](./img/install/win/node/step5.png)
+7. ![step6](./img/install/win/node/step6.png)
+8. ![step7](./img/install/win/node/step7.png)
 
 # Running Programs
 
