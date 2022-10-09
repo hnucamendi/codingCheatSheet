@@ -48,8 +48,10 @@ JavaScript is a lightweight, interpreted, multi-paradigm language, and features 
   - [Invoking Classic Hoisted Function](#invoking-classic-hoisted-function)
   - [Invoking Classic Non-Hoisted Function](#invoking-classic-non-hoisted-function)
   - [Invoking Arrow Function](#invoking-arrow-function)
-  - [Declaring and Invoking An Anonymous Function](#declaring-and-invoking-an-anonymous-function)
+  - [Declaring and Invoking Factory Functions](#declaring-and-invoking-factory-functions)
+  - [Declaring and Invoking Anonymous Functions](#declaring-and-invoking-anonymous-functions)
   - [Using Arguments and Parameters](#using-arguments-and-parameters)
+  - [Functions Code Along](#functions-code-along)
 - [Control Flow](#control-flow)
   - [Procedural Execution](#procedural-execution)
   - [Conditional Execution](#conditional-execution)
@@ -563,7 +565,28 @@ return "Hello World from an Arrow Function"
 helloWorld() // returns "Hello World from an Arrow Function"
 ```
 
-## Declaring and Invoking An Anonymous Function
+## Declaring and Invoking Factory Functions
+
+Factory functions are functions that return objects, simple, it works kind of like a `class` but remember there are many way to accomplish the same thing in JavaScript. A factory function is really defined by what is reuturned so it can be hoisted, non hoisted, or arrow function.
+
+```JavaScript
+function person(firstName, lastName, age, job) {
+  return {
+    firstName: firstName,
+    lastName: lastName,
+    age: age,
+    job: job,
+  };
+}
+
+const p = person("John", "Doe", 34, "worker");
+
+console.log(p); // Returns { firstName: 'John', lastName: 'Doe', age: 34, job: 'worker' }
+```
+
+In practice you probably wont encounter factory functions, classes and constructors are preffered, but its good to know this is possible.s
+
+## Declaring and Invoking Anonymous Functions
 
 Usually, we don't create Anonymous Functions by themselves, so I will make a special section here to talk all about anonymous functions
 
@@ -639,7 +662,9 @@ console.log(sayHello('Samny')); //Returns "Hello Samny"
 const sayHello = (name) => 'Hello ' + name;
 ```
 
----
+## Functions Code Along
+
+[Click Here](./code-along/functions/functions.js)
 
 | <strong>[Scroll to Last Section](#functions-what-are-they)</strong> |
 | <strong>[Scroll to Last Section](#node)</strong> |
