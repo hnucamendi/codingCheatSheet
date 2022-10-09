@@ -21,9 +21,9 @@ JavaScript is a lightweight, interpreted, multi-paradigm language, and features 
   - [Node | Mac](#node--mac)
     - [Without Brew](#without-brew)
     - [With Brew](#with-brew)
+  - [Other | Mac](#other--mac)
   - [VSCode | Windows](#vscode--windows)
   - [Node | Windows](#node--windows)
-  - [Other](#other)
 - [Running Programs](#running-programs)
   - [Running in the browser](#running-in-the-browser)
   - [Running in Node](#running-in-node)
@@ -148,11 +148,7 @@ There are two installation methods, with Brew and without Brew, read over both b
 
 Done! This is why I love brew, it just takes care of the whole process
 
-## VSCode | Windows
-
-## Node | Windows
-
-## Other
+## Other | Mac
 
 These are some tools that I would recommend installing
 
@@ -161,6 +157,36 @@ These are some tools that I would recommend installing
 
 <a href="#">![Last Section](./img/oneArrow.png)</a> Scroll to Last Section
 <a href="#">![TOP](./img/twoArrow.png)</a> Scroll to Top
+
+## VSCode | Windows
+
+First, go to the official [VSCode Website](https://code.visualstudio.com/), and you should arrive at a screen like this (which may change in the future).
+
+1. Once on a screen click on the `Download Mac Universal` Button
+   ![step1](./img/install/win/vscode/step1.PNG)
+2. From there installation should install and you can go ahead and place the file on your `Desktop` for now.
+   ![step2](./img/install/win/vscode/step2.PNG)
+3. Once you place the file on your `Desktop` you should now have an exe file, double click it and follow the installation process. When you get the app open up you are ready to go
+
+That's it, you know have VSCode installed, unlike on mac code is already available for you to use, so you dont have to install that seperatley
+
+## Node | Windows
+
+1. First go to the official [Node Webiste](https://nodejs.org/en/download/)
+2. Click on the
+   ![step1](./img/install/win/node/step1.PNG)
+3. Install the file to your desktop
+   ![step2](./img/install/win/node/step2.PNG)
+4. from here you can follow the installation instructions from the installer
+   ![step3](./img/install/win/node/step3.PNG)
+5. 
+   ![step4](./img/install/win/node/step4.PNG)
+5. 
+   ![step5](./img/install/win/node/step5.PNG)
+6. 
+   ![step6](./img/install/win/node/step6.PNG)
+7. 
+   ![step7](./img/install/win/node/step7.PNG)
 
 # Running Programs
 
