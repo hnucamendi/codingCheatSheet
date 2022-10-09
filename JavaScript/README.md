@@ -61,21 +61,25 @@ JavaScript is a lightweight, interpreted, multi-paradigm language, and features 
   - [Switch Statement](#switch-statement)
   - [Truthy Falsey](#truthy-falsey)
   - [Short Circuiting](#short-circuiting)
+  - [Control Flow Code Along](#control-flow-code-along)
 - [Objects](#objects)
   - [Defining an Object](#defining-an-object)
   - [What can Objects hold?](#what-can-objects-hold)
   - [Object Destructuring](#object-destructuring)
+  - [Objects Code Along](#objects-code-along)
 - [Arrays](#arrays)
   - [Defining an Array](#defining-an-array)
   - [Arrays and their Index](#arrays-and-their-index)
   - [Array Methods](#array-methods)
   - [Array Destructuring](#array-destructuring)
+  - [Arrays Code Along](#arrays-code-along)
 - [Classes](#classes)
   - [Class Definition](#class-definition)
   - [Class Expression](#class-expression)
   - [Using a Constructor](#using-a-constructor)
   - [Writing out a Car Class](#writing-out-a-car-class)
   - [Extending Classes / Inheritance](#extending-classes--inheritance)
+  - [Classes Code Along](#classes-code-along)
 - [Before ES6](#before-es6)
   - [Initializing Variables](#initializing-variables)
   - [The Var Keyword and Scope](#the-var-keyword-and-scope)
@@ -936,6 +940,10 @@ console.log(c); // Returns false
 console.log(d); // Returns "Hello"
 ```
 
+## Control Flow Code Along
+
+[Click Here](./code-along/control-flow/control-flow.js)
+
 ---
 
 | <strong>[Scroll to top of section](#control-flow)</strong> |
@@ -1163,7 +1171,9 @@ console.log(info.name); // Returns "John"
 console.log(info.age); // Returns 32
 ```
 
----
+## Objects Code Along
+
+[Click Here](./code-along/objects/objects.js)
 
 | <strong>[Scroll to top of section](#objects)</strong> |
 | <strong>[Scroll to last section](#control-flow)</strong> |
@@ -1342,7 +1352,9 @@ const [name = "John"] = test;
 console.log(jName);
 ```
 
----
+## Arrays Code Along
+
+[Click Here](./code-along/arrays/arrays.js)
 
 | <strong>[Scroll to top of section](#arrays)</strong> |
 | <strong>[Scroll to last section](#objects)</strong> |
@@ -1502,6 +1514,10 @@ john.addCar(new Car("Green", "Honda", "Civic"));
 console.log(john.listCars());
 console.log(john.whoAmI());
 ```
+
+## Classes Code Along
+
+[Click Here](./code-along/classes/classes.js)
 
 ---
 
